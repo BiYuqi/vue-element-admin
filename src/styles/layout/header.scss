@@ -1,0 +1,32 @@
+.header-wrap{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  .user-info{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 888;
+  }
+  .el-dropdown-link{
+    cursor: pointer;
+  }
+  .avatar{
+    width: 2em;
+    height: 2em;
+  }
+  .header-icon{
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .3s;
+    line-height: 58px;
+    color: rgba(0, 0, 0, 0.55);
+    &.collapse{
+      transform: rotate(90deg);
+    }
+  }
+}

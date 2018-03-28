@@ -1,0 +1,8 @@
+.app-main{
+  min-height: 100%;
+  margin-left: 180px;
+  transition: margin-left 0.28s;
+  &.hideSidebar{
+    margin-left: 36px;
+  }
+}

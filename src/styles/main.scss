@@ -1,0 +1,34 @@
+@import "./mixin.scss";
+body{
+  font-size: 14px;
+}
+body, html{
+  height: 100%;
+  width: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-wrap{
+  height: 100%;
+  width: 100%;
+}
+
+.router-link-active{
+  span{
+    color: rgb(64, 158, 255) !important;
+  }
+  .icon{
+    color: rgb(64, 158, 255) !important;
+  }
+}
+.clear::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}

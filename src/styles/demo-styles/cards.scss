@@ -1,0 +1,76 @@
+.dashboard{
+  height: 100%;
+  background-size: cover;
+  padding: 32px;
+  background-color: #f0f2f5;
+  .panel-box{
+    display: flex;
+    flex-direction: column;
+    margin-right: 26px;
+    text-align: center;
+    font-weight: bold;
+    .top{
+      font-size: 16px;
+      color: rgba(0,0,0,.5);
+      margin-bottom: 6px;
+    }
+    .bot{
+      font-size: 20px;
+      color: #666;
+    }
+  }
+  .panel{
+    padding: 18px;
+    transition: all 0.38s ease-out;
+    border-radius: 6px;
+    margin-left: 20px;
+  }
+  .panel-peoples{
+    .icon-peoples{
+      color: #40c9c6;
+      transition: all 0.38s ease-out;
+    }
+    &:hover{
+      background-color: #40c9c6;
+      .icon-peoples{
+        color: #fff;
+      }
+    }
+  }
+  .panel-message{
+    .icon-message{
+      color: #36a3f7;
+      transition: all 0.38s ease-out;
+    }
+    &:hover{
+      background-color: #36a3f7;
+      .icon-message{
+        color: #fff;
+      }
+    }
+  }
+  .panel-money{
+    .icon-money{
+      color: #f4516c;
+      transition: all 0.38s ease-out;
+    }
+    &:hover{
+      background-color: #f4516c;
+      .icon-money{
+        color: #fff;
+      }
+    }
+  }
+  .panel-shoppingCard{
+    .icon-shoppingCard{
+      color: #34bfa3;
+      transition: all 0.38s ease-out;
+    }
+    &:hover{
+      background-color: #34bfa3;
+      .icon-shoppingCard{
+        color: #fff;
+      }
+    }
+  }
+}
