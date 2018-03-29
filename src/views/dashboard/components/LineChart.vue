@@ -4,7 +4,9 @@
 
 <script>
 import echarts from 'echarts'
+import { dispose } from '@/myMixins/charts'
 export default {
+  mixins: [dispose],
   data () {
     return {
       charts: null
@@ -32,11 +34,6 @@ export default {
     },
     '$store.state.sidebarStatus': { // 监听侧边栏变化
       handler (status) {
-        // setTimeout(() => {
-        //   this.charts.resize({
-        //     width: document.querySelector('#main-line').getBoundingClientRect().width
-        //   })
-        // }, 280)
         const sidebarElm = document.querySelector('.sidebar-wrap')
         sidebarElm.addEventListener('transitionend', () => {
           this.init(this.chartData)
@@ -80,7 +77,10 @@ export default {
         tooltip: {
           trigger: 'axis',
           axisPointer: {
-            type: 'cross'
+            type: 'cross',
+            label: {
+              backgroundColor: '#36a3f7'
+            }
           },
           padding: [5, 10]
         },
@@ -130,10 +130,6 @@ export default {
       }
       this.charts.setOption(options)
     }
-  },
-  beforeDestroy () {
-    this.charts.dispose()
-    this.charts = null
   },
   mounted () {
     this.init(this.chartData)

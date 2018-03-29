@@ -11,7 +11,7 @@ export default {
     return {}
   },
   mounted () {
-    console.log(this.$router, a)
+    // console.log(this.$router, a)
   },
   components: {
     ErrorLog

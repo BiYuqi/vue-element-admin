@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="main-line-bar" :style="{height:height,width:width}"></div>
+  <div id="visit-bar" :style="{height:height,width:width}"></div>
 </template>
 
 <script>
@@ -24,21 +24,13 @@ export default {
   },
   methods: {
     init () {
-      var xAxisData = []
-      var data1 = []
-      var data2 = []
-      for (var i = 0; i < 10; i++) {
-        xAxisData.push('娱乐' + i)
-        data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5)
-        data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5)
-      }
-      this.charts = echarts.init(document.getElementById('main-line-bar'))
+      this.charts = echarts.init(document.getElementById('visit-bar'))
       const options = {
         title: {
-          text: '猜猜猜'
+          text: '访问量'
         },
         legend: {
-          data: ['boy', 'girl'],
+          data: ['2017年', '2018年'],
           show: true,
           top: 15
         },
@@ -56,33 +48,28 @@ export default {
           padding: [5, 10]
         },
         xAxis: {
-          data: xAxisData,
-          silent: false,
-          splitLine: {
-            show: false
-          }
+          type: 'value',
+          boundaryGap: [0, 0.01]
         },
-        yAxis: {},
+        yAxis: {
+          type: 'category',
+          data: ['巴西', '印尼', '美国', '印度', '中国', '世界(万)']
+        },
         series: [
           {
-            name: 'boy',
+            name: '2017年',
             type: 'bar',
-            data: data1,
-            barWidth: '8',
-            animationDelay: function (idx) {
-              return idx * 10
-            },
+            data: [18203, 23489, 29034, 104970, 131744, 630230],
             itemStyle: {
-              color: '#36a3f7'
+              color: '#0f3362'
             }
           },
           {
-            name: 'girl',
+            name: '2018年',
             type: 'bar',
-            barWidth: '8',
-            data: data2,
+            data: [19325, 23438, 31000, 121594, 134141, 681807],
             itemStyle: {
-              color: '#f4516c'
+              color: '#d34245'
             }
           }
         ]
@@ -97,7 +84,7 @@ export default {
 </script>
 
 <style lang="scss">
-#main-line-bar{
+#visit-bar{
   width: 100%;
   background-color:#fff;
   overflow-x: hidden;

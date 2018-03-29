@@ -7,6 +7,12 @@
       </el-col>
     </el-row>
     <el-row :gutter="15">
+      <el-col :span="9">
+        <line-bar></line-bar>
+      </el-col>
+      <el-col :span="9">
+        <visit-bar></visit-bar>
+      </el-col>
       <el-col :span="6">
         <todo-app></todo-app>
       </el-col>
@@ -17,6 +23,8 @@
 import LineChart from './components/LineChart.vue'
 import PanelGroup from './components/PanelGroup.vue'
 import TodoApp from './TodoList/index.vue'
+import LineBar from './components/LineBar.vue'
+import VisitBar from './components/VisitBar.vue'
 const lineChartData = {
   newVisitis: {
     expectedData: [100, 120, 161, 134, 105, 160, 165],
@@ -50,7 +58,9 @@ export default {
   components: {
     LineChart,
     PanelGroup,
-    TodoApp
+    TodoApp,
+    LineBar,
+    VisitBar
   }
 }
 </script>
