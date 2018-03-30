@@ -1,10 +1,14 @@
 <template lang="html">
-  <div id="visit-bar" :style="{height:height,width:width}"></div>
+  <div class="line-chart-wrap">
+    <card-title title="2017年~2018年主要GDP对比"></card-title>
+    <div id="visit-bar" :style="{height:height,width:width}"></div>
+  </div>
 </template>
 
 <script>
 import echarts from 'echarts'
 import {dispose, listenSideBar} from '@/myMixins/charts'
+import CardTitle from '@/components/Charts/CardTitle'
 export default {
   mixins: [dispose, listenSideBar],
   props: {
@@ -17,6 +21,9 @@ export default {
       default: '350px'
     }
   },
+  components: {
+    CardTitle
+  },
   data () {
     return {
       charts: null
@@ -26,18 +33,16 @@ export default {
     init () {
       this.charts = echarts.init(document.getElementById('visit-bar'))
       const options = {
-        title: {
-          text: '访问量'
-        },
-        legend: {
-          data: ['2017年', '2018年'],
-          show: true,
-          top: 15
-        },
+        // legend: {
+        //   data: ['2017年', '2018年'],
+        //   show: false,
+        //   top: 15
+        // },
         grid: {
-          left: '2%',
-          right: '3%',
-          bottom: '3%',
+          top: '8%',
+          left: '5%',
+          right: '5%',
+          bottom: '5%',
           containLabel: true
         },
         tooltip: {

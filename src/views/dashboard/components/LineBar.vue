@@ -1,10 +1,14 @@
 <template lang="html">
-  <div id="main-line-bar" :style="{height:height,width:width}"></div>
+  <div class="line-chart-wrap">
+    <card-title title="娱乐项目"></card-title>
+    <div id="main-line-bar" :style="{height:height,width:width}"></div>
+  </div>
 </template>
 
 <script>
 import echarts from 'echarts'
 import {dispose, listenSideBar} from '@/myMixins/charts'
+import CardTitle from '@/components/Charts/CardTitle'
 export default {
   mixins: [dispose, listenSideBar],
   props: {
@@ -16,6 +20,9 @@ export default {
       type: String,
       default: '350px'
     }
+  },
+  components: {
+    CardTitle
   },
   data () {
     return {
@@ -34,18 +41,16 @@ export default {
       }
       this.charts = echarts.init(document.getElementById('main-line-bar'))
       const options = {
-        title: {
-          text: '猜猜猜'
-        },
-        legend: {
-          data: ['boy', 'girl'],
-          show: true,
-          top: 15
-        },
+        // legend: {
+        //   data: ['boy', 'girl'],
+        //   show: true,
+        //   top: 15
+        // },
         grid: {
-          left: '2%',
-          right: '3%',
-          bottom: '3%',
+          top: '8%',
+          left: '5%',
+          right: '5%',
+          bottom: '5%',
           containLabel: true
         },
         tooltip: {
@@ -97,9 +102,18 @@ export default {
 </script>
 
 <style lang="scss">
-#main-line-bar{
+.line-chart-wrap{
   width: 100%;
   background-color:#fff;
-  overflow-x: hidden;
+  .line-card-title{
+    border-bottom: 1px solid #e9eaec;
+    padding: 14px 16px;
+    line-height: 1;
+  }
+  #main-line-bar{
+    width: 100%;
+    background-color:#fff;
+    overflow-x: hidden;
+  }
 }
 </style>

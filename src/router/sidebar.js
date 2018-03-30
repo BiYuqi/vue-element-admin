@@ -18,6 +18,23 @@ export const baseRoute = [
     ]
   },
   {
+    path: '/icon',
+    title: '图标',
+    name: 'icon',
+    icon: 'icon',
+    component: Main,
+    children: [
+      {
+        path: 'icon',
+        name: 'icon_index',
+        meta: {
+          title: '图标'
+        },
+        component: () => import('@/views/components-demo/Icon/index.vue')
+      }
+    ]
+  },
+  {
     path: '/compoents',
     name: 'compoents',
     component: Main,
@@ -50,23 +67,6 @@ export const baseRoute = [
           access: ['admin']
         },
         component: () => import('@/views/components-demo/backToTop.vue')
-      }
-    ]
-  },
-  {
-    path: '/icon',
-    title: '图标',
-    name: 'icon',
-    icon: 'icon',
-    component: Main,
-    children: [
-      {
-        path: 'icon',
-        name: 'icon_index',
-        meta: {
-          title: '图标'
-        },
-        component: () => import('@/views/components-demo/icon.vue')
       }
     ]
   },

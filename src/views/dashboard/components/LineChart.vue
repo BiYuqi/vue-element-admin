@@ -1,16 +1,23 @@
 <template lang="html">
-  <div id="main-line" :style="{height:height,width:width}"></div>
+  <div class="line-chart-wrap">
+    <card-title title="技术走势图"></card-title>
+    <div id="main-line" :style="{height:height,width:width}"></div>
+  </div>
 </template>
 
 <script>
 import echarts from 'echarts'
 import { dispose } from '@/myMixins/charts'
+import CardTitle from '@/components/Charts/CardTitle'
 export default {
   mixins: [dispose],
   data () {
     return {
       charts: null
     }
+  },
+  components: {
+    CardTitle
   },
   props: {
     chartData: {
@@ -54,6 +61,13 @@ export default {
           show: true,
           top: 15
         },
+        grid: {
+          top: '5%',
+          left: '5%',
+          right: '5%',
+          bottom: '5%',
+          containLabel: true
+        },
         xAxis: {
           type: 'category',
           boundaryGap: false,
@@ -83,12 +97,6 @@ export default {
             }
           },
           padding: [5, 10]
-        },
-        grid: {
-          left: '2%',
-          right: '3%',
-          bottom: '3%',
-          containLabel: true
         },
         axisPointer: { // 坐标轴指示器
           show: true,
@@ -138,7 +146,7 @@ export default {
 </script>
 
 <style lang="scss">
-.main-line{
+.line-chart-wrap{
   width: 100%;
   background-color:#fff;
 }
