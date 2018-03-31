@@ -7,10 +7,10 @@
 
 <script>
 import echarts from 'echarts'
-import {dispose, listenSideBar} from '@/myMixins/charts'
+import {dispose} from '@/myMixins/charts'
 import CardTitle from '@/components/Charts/CardTitle'
 export default {
-  mixins: [dispose, listenSideBar],
+  mixins: [dispose],
   props: {
     width: {
       type: String,

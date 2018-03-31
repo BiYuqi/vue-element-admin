@@ -7,7 +7,7 @@
     </svg-ic>
     <el-dropdown trigger="click" size="small" class="user-info" @command="handleCommand">
       <span class="el-dropdown-link">
-        <svg-icon name="biyuqi" class="avatar"></svg-icon>
+        <svg-icon name="boy" class="avatar"></svg-icon>
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">

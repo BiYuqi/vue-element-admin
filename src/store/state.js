@@ -13,15 +13,31 @@ export const state = {
   todoList: [
     {
       status: 1,
-      content: 'vue-element-admin计划表'
+      content: 'vue-element-admin持续开发维护'
     },
     {
       status: 1,
-      content: 'vue多页面开发计划'
+      content: '深入Vue的开发学习'
     },
     {
       status: 1,
-      content: 'is函数库开发'
+      content: '开始学习Electron'
+    },
+    {
+      status: 1,
+      content: '算法，数据结构'
+    },
+    {
+      status: 1,
+      content: '学习持续集成'
+    },
+    {
+      status: 1,
+      content: '前端工程化+自动化有更多的实践体会'
+    },
+    {
+      status: 1,
+      content: '如果可以学习下PWA，小程序'
     }
   ], // todo-list
   errorLog: []

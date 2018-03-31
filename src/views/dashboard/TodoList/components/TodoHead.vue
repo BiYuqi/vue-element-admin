@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 .todo-header{
-  padding: 6px;
+  // padding: 6px;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);

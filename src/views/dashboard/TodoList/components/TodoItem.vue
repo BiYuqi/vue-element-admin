@@ -63,7 +63,7 @@ export default {
   border-top: 1px solid #e6e6e6;
   ul{
     list-style: none;
-    max-height: 200px;
+    max-height: 350px;
     overflow-y: scroll;
   }
   ul::-webkit-scrollbar{
