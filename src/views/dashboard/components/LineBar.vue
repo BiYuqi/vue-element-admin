@@ -78,7 +78,7 @@ export default {
               return idx * 10
             },
             itemStyle: {
-              color: '#36a3f7'
+              color: '#f2c31a'
             }
           },
           {
@@ -87,7 +87,7 @@ export default {
             barWidth: '8',
             data: data2,
             itemStyle: {
-              color: '#f4516c'
+              color: '#24b7f2'
             }
           }
         ]

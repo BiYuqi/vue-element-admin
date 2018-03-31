@@ -3,10 +3,9 @@
     <el-menu
       ref="sidebar"
       default-active="$route.path"
-      @open="handleOpen"
-      @close="handleClose"
       @select="handleSelect"
       mode="vertical"
+      :collapse-transition="false"
       background-color="#304156"
       text-color="#bfcbd9"
       unique-opened
@@ -66,12 +65,7 @@ export default {
     }
   },
   methods: {
-    handleOpen (key, keyPath) {
-      console.log(key)
-    },
-    handleClose (key, keyPath) {},
     handleSelect (key, keyPath) {
-      console.log(key)
       this.$router.push({
         name: key
       })

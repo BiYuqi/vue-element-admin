@@ -66,7 +66,7 @@ export default {
             type: 'bar',
             data: [18203, 23489, 29034, 104970, 131744, 630230],
             itemStyle: {
-              color: '#0f3362'
+              color: 'rgb(129, 227, 238)'
             }
           },
           {
@@ -74,7 +74,7 @@ export default {
             type: 'bar',
             data: [19325, 23438, 31000, 121594, 134141, 681807],
             itemStyle: {
-              color: '#d34245'
+              color: 'rgb(251, 118, 123)'
             }
           }
         ]

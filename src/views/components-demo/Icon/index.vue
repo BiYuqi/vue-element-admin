@@ -5,11 +5,11 @@
     </div>
     <div class="render-icon">
       <div class="icon-item" v-for="(item, index) in lists" :key="index">
-        <el-tooltip class="item" effect="dark" placement="top">
+        <el-tooltip class="item" effect="dark" placement="top" @click.native="copy(renderIcon(item))">
           <div slot="content">
             {{renderIcon(item)}}
           </div>
-          <div @click="copy(renderIcon(item))">
+          <div>
             <svg-icon :name="item" class="icon-demo"/>
             <span>{{item}}</span>
           </div>
@@ -53,7 +53,7 @@ export default {
   padding: 10px 20px 0;
   .link{
     padding: 10px 20px;
-    margin: 20px;
+    // margin: 20px;
     border-radius: 5px;
     background-color: rgba(64, 202, 198, .3);
     margin-bottom: 40px;

@@ -1,29 +1,32 @@
 # vue-system
 
-> A Vue.js project
+> vue-cli + element-ui 后台开发项目
+## DEMO
+
+![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-home%202018-03-31%2014.41.44.png)
+
+![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-icon2018-03-31%2014.42.30.png)
 
 ## Build Setup
+```js
+// download files
+git clone https://github.com/BiYuqi/vue-element-admin.git
 
-``` bash
-# install dependencies
+cd vue-element-admin
+
+// install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+// serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+// build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
+// run unit tests
 npm run unit
 
-# run e2e tests
-npm run e2e
-
-# run all tests
+// run all tests
 npm test
 ```
 

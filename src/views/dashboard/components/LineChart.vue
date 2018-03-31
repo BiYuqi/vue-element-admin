@@ -56,11 +56,11 @@ export default {
       const options = {
         backgroundColor: '#fff',
         animation: true,
-        legend: {
-          data: ['JavaScript', 'Vue'],
-          show: true,
-          top: 15
-        },
+        // legend: {
+        //   data: ['JavaScript', 'Vue'],
+        //   show: true,
+        //   top: 15
+        // },
         grid: {
           top: '5%',
           left: '5%',

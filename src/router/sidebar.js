@@ -104,42 +104,6 @@ export const baseRoute = [
     ]
   },
   {
-    path: '/setting',
-    title: '配置',
-    name: 'set',
-    icon: 'qq',
-    component: Main,
-    children: [
-      {
-        path: 'setting',
-        name: 'setting_index',
-        meta: {
-          title: '配置',
-          access: ['admin']
-        },
-        component: () => import('@/views/components-demo/setting.vue')
-      }
-    ]
-  },
-  {
-    path: '/bug',
-    title: '配置',
-    name: 'bug',
-    icon: 'bug',
-    component: Main,
-    children: [
-      {
-        path: 'bug',
-        name: 'bug_index',
-        meta: {
-          title: '错误日志',
-          access: ['admin']
-        },
-        component: () => import('@/views/components-demo/bugPage.vue')
-      }
-    ]
-  },
-  {
     path: '/test',
     title: '小工具',
     name: 'test',
@@ -161,6 +125,40 @@ export const baseRoute = [
           title: 'CSS三角制作'
         },
         component: () => import('@/views/components-demo/cssSet.vue')
+      }
+    ]
+  },
+  {
+    path: '/setting',
+    name: 'set',
+    icon: 'qq',
+    component: Main,
+    children: [
+      {
+        path: 'setting',
+        name: 'setting_index',
+        meta: {
+          title: '配置',
+          access: ['admin']
+        },
+        component: () => import('@/views/components-demo/setting.vue')
+      }
+    ]
+  },
+  {
+    path: '/bug',
+    name: 'bug',
+    icon: 'bug',
+    component: Main,
+    children: [
+      {
+        path: 'bug',
+        name: 'bug_index',
+        meta: {
+          title: '错误日志',
+          access: ['admin']
+        },
+        component: () => import('@/views/components-demo/bugPage.vue')
       }
     ]
   }
