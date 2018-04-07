@@ -22,6 +22,9 @@
 import Cookie from 'js-cookie'
 import SvgIc from '@/components/SvgIcon'
 export default {
+  components: {
+    SvgIc
+  },
   methods: {
     goBack () {
       window.history.length > 1
@@ -59,9 +62,6 @@ export default {
     collapse () {
       return this.$store.state.sidebarStatus
     }
-  },
-  components: {
-    SvgIc
   }
 }
 </script>
