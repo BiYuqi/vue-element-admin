@@ -1,29 +1,58 @@
 <template>
-  <div class="mark-down">
-    <ds-modal :visible.sync="visible"
-    title="表单"></ds-modal>
-    <el-button @click="opendModal">打开</el-button>
+  <div class="components-container">
+    <div class="intro">
+      Markedown is based on
+      <a href="https://github.com/sparksuite/simplemde-markdown-editor" target="_blank">
+        A simple, beautiful, and embeddable JavaScript Markdown editor.
+      </a>
+    </div>
+    <markdown-editor v-model="content" id="contentEditor" :height="400"></markdown-editor>
+    <el-button @click="renderMK">To HTML</el-button>
+    <div v-html="html" style="padding:20px;"></div>
   </div>
 </template>
 
 <script>
-import DsModal from '@/components/DsModal/modal.vue'
+import MarkdownEditor from '@/components/MarkDown'
+const con = `* Generic list item
+* Generic list item
+* Generic list item
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item`
 export default {
   data () {
     return {
-      visible: false
+      content: con,
+      html: ''
     }
   },
   components: {
-    DsModal
+    MarkdownEditor
   },
   methods: {
-    opendModal () {
-      this.visible = true
+    renderMK () {
+      import('showdown').then((showdown) => {
+        const converter = new showdown.Converter()
+        this.html = converter.makeHtml(this.content)
+      })
     }
   }
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+.components-container{
+  padding: 20px;
+  .intro{
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f3f3f3;
+    a{
+      color: #409eff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+}
 </style>
