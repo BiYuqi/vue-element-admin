@@ -1,4 +1,4 @@
-const files = require.context('../../../assets/icons/svg', true, /\.svg$/)
+const files = require.context('../../assets/icons/svg', true, /\.svg$/)
 
 const iconName = []
 files.keys().forEach((key) => {

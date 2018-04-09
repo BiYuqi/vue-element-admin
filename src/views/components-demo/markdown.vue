@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ComIntro from '@/views/components-demo/components-intro/index'
+import ComIntro from '@/views/components-intro/index'
 import MarkdownEditor from '@/components/MarkdownEditor'
 const con = `* Generic list item
 * Generic list item

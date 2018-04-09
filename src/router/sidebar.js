@@ -30,7 +30,7 @@ export const baseRoute = [
         meta: {
           title: '图标'
         },
-        component: () => import('@/views/components-demo/Icon/index.vue')
+        component: () => import('@/views/IconPage/index.vue')
       }
     ]
   },
@@ -91,7 +91,7 @@ export const baseRoute = [
         meta: {
           title: '表单创建'
         },
-        component: () => import('@/views/components-demo/createForm.vue')
+        component: () => import('@/views/form/createForm.vue')
       },
       {
         path: 'form-editor',
@@ -99,7 +99,7 @@ export const baseRoute = [
         meta: {
           title: '编辑表单'
         },
-        component: () => import('@/views/components-demo/editForm.vue')
+        component: () => import('@/views/form/editForm.vue')
       },
       {
         path: 'form-update',
@@ -107,7 +107,7 @@ export const baseRoute = [
         meta: {
           title: '表单监听'
         },
-        component: () => import('@/views/components-demo/formUpdate.vue')
+        component: () => import('@/views/form/formUpdate.vue')
       }
     ]
   },
