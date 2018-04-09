@@ -60,6 +60,14 @@ export const baseRoute = [
         component: () => import('@/views/components-demo/jsonEditor.vue')
       },
       {
+        path: 'avator-upload',
+        name: 'avator_upload',
+        meta: {
+          title: '头像上传'
+        },
+        component: () => import('@/views/components-demo/avatorUpload.vue')
+      },
+      {
         path: 'back-to-top',
         name: 'back_to_top',
         meta: {

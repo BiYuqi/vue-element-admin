@@ -1,11 +1,9 @@
 <template>
   <div class="components-container">
-    <div class="intro">
-      Markedown is based on
-      <a href="https://github.com/sparksuite/simplemde-markdown-editor" target="_blank">
-        A simple, beautiful, and embeddable JavaScript Markdown editor.
-      </a>
-    </div>
+    <com-intro
+      leftTxt="Markedown is based on"
+      url="https://github.com/sparksuite/simplemde-markdown-editor"
+      urlTxt="A simple, beautiful, and embeddable JavaScript Markdown editor."></com-intro>
     <markdown-editor v-model="content" id="contentEditor" :height="400"></markdown-editor>
     <el-button @click="renderMK">To HTML</el-button>
     <div v-html="html" style="padding:20px;"></div>
@@ -13,7 +11,8 @@
 </template>
 
 <script>
-import MarkdownEditor from '@/components/MarkDown'
+import ComIntro from '@/views/components-demo/components-intro/index'
+import MarkdownEditor from '@/components/MarkdownEditor'
 const con = `* Generic list item
 * Generic list item
 * Generic list item
@@ -28,7 +27,8 @@ export default {
     }
   },
   components: {
-    MarkdownEditor
+    MarkdownEditor,
+    ComIntro
   },
   methods: {
     renderMK () {

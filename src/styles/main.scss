@@ -32,3 +32,16 @@ body, html{
   left: 0;
   overflow: hidden;
 }
+// 开篇组件介绍
+.intro{
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f3f3f3;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  a{
+    color: #409eff;
+    cursor: pointer;
+  }
+}
