@@ -2,6 +2,9 @@
   min-height: 100%;
   margin-left: 180px;
   transition: margin-left 0.28s;
+  .components-wrap{
+    padding: 20px;
+  }
   &.hideSidebar{
     margin-left: 36px;
   }

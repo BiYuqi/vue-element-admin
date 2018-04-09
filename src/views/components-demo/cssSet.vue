@@ -47,7 +47,6 @@ export default {
 
 <style lang="scss">
 .css-angle{
-  padding: 15px 20px;
   .box{
     width: 200px;
     height: 200px;

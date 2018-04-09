@@ -35,7 +35,4 @@ export default {
 </script>
 
 <style lang="scss">
-.form-listen{
-  padding: 10px 15px;
-}
 </style>

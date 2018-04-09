@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import AppMain from '@/views/layout/appMain'
+import AppMain from '@/views/layout/AppMain'
 import SideBar from '@/views/layout/SideBar'
 export default {
   data () {

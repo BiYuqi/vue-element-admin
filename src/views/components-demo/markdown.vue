@@ -43,7 +43,6 @@ export default {
 
 <style lang="scss">
 .components-container{
-  padding: 20px;
   .intro{
     padding: 15px;
     margin-bottom: 20px;

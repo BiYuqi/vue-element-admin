@@ -37,7 +37,4 @@ export default {
 </script>
 
 <style lang="scss">
-.setting-wrap{
-  padding: 15px 25px;
-}
 </style>

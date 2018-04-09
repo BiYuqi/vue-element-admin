@@ -19,6 +19,5 @@ export default {
 <style lang="scss">
 .back-top{
   height: 1024px;
-  padding: 15px 20px;
 }
 </style>

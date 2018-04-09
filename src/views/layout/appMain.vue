@@ -2,7 +2,9 @@
   <div class="app-main" :class="{hideSidebar: isCollapse}">
     <header-on></header-on>
     <tag-view></tag-view>
-    <router-view :key="key"/>
+    <div :class="{'components-wrap': isDashBoardPage}">
+      <router-view :key="key"/>
+    </div>
   </div>
 </template>
 
@@ -20,6 +22,9 @@ export default {
     },
     isCollapse () {
       return this.$store.state.sidebarStatus
+    },
+    isDashBoardPage () { // 为了处理样式  dashboard_index 页面不加padding
+      return this.$route.name !== 'dashboard_index'
     }
   }
 }

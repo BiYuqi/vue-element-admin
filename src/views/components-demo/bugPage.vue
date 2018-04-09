@@ -20,7 +20,4 @@ export default {
 </script>
 
 <style lang="scss">
-.bugger{
-  padding: 15px;
-}
 </style>

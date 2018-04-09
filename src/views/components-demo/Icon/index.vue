@@ -50,7 +50,6 @@ export default {
 
 <style lang="scss">
 .svg-icon-demo{
-  padding: 20px;
   .link{
     padding: 10px 20px;
     // margin: 20px;
