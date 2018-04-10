@@ -1,7 +1,9 @@
 <template>
   <div class="page-error">
-    <img src="../../assets/img/404.png" alt="">
-    <el-button type="primary" @click="backHome" class="back-home">返回首页</el-button>
+    <div class="center-error">
+      <img src="../../assets/img/404.png" alt="">
+      <el-button type="primary" @click="backHome" class="back-home">返回首页</el-button>
+    </div>
   </div>
 </template>
 
@@ -23,15 +25,17 @@ export default {
   background-color: #edeff1;
   height: 100%;
   width: 100%;
-  img{
-    width: 600px;
+  .center-error{
     @include abs(10%, auto, auto, 50%);
     transform: translateX(-50%);
+    text-align: center;
+  }
+  img{
+    width: 600px;
   }
   .back-home{
     width: 200px;
-    @include abs(70%, auto, auto, 50%);
-    transform: translateX(-57%);
+    margin-right: 40px;
   }
 }
 </style>
