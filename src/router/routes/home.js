@@ -1,5 +1,5 @@
 export default {
-  path: '',
+  path: '/home',
   name: 'home_index',
   title: '报警系统',
   meta: {

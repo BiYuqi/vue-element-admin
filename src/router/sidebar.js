@@ -2,10 +2,11 @@ import Main from '@/views/Main'
 // 侧边栏路由一般都放在这里 需要权限校验
 export const baseRoute = [
   {
-    path: '/dashboard',
+    path: '',
     component: Main,
     title: '首页',
     icon: 'dashboard',
+    redirect: '/dashboard',
     children: [
       {
         path: 'dashboard',
@@ -71,8 +72,7 @@ export const baseRoute = [
         path: 'back-to-top',
         name: 'back_to_top',
         meta: {
-          title: 'BackTop',
-          access: ['admin']
+          title: 'BackTop'
         },
         component: () => import('@/views/components-demo/backToTop.vue')
       }
@@ -118,14 +118,6 @@ export const baseRoute = [
     icon: 'tab',
     component: Main,
     children: [
-      {
-        path: 'test',
-        name: 'test_index',
-        meta: {
-          title: '测试'
-        },
-        component: () => import('@/views/components-demo/Forms/HelloWorld.vue')
-      },
       {
         path: 'css',
         name: 'css_index',

@@ -6,6 +6,7 @@ import routes from './baseConfig'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import store from '@/store'
+import errPage from '@/utils/404'
 Vue.use(Router)
 export const router = new Router({
   // mode: 'history',
@@ -26,7 +27,7 @@ router.beforeEach((to, from, next) => {
     })
   } else if (Cookie.get('user') && to.name === 'login') {
     next({
-      name: 'home_index'
+      name: 'dashboard_index'
     })
   } else {
     /**
@@ -40,6 +41,7 @@ router.beforeEach((to, from, next) => {
         store.dispatch('permiss/setFilterRoutes', role.data.data.role[0]).then((res) => { // 根据role过滤路由
           store.dispatch('permiss/setRoutes', res) // vuex管理路由
           router.addRoutes(res) // 动态的添加路由
+          router.addRoutes(errPage) // 增加404page
           next({ ...to, replace: true })
         })
       })

@@ -3,7 +3,7 @@ export const state = {
     {
       meta: {title: '首页'},
       name: 'dashboard_index',
-      path: '/dashboard/dashboard',
+      path: '/dashboard',
       arg: {},
       query: {}
     }
