@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Cookie from 'js-cookie'
 import Util from '@/utils/baseSetting'
 import routes from './baseConfig'
+import otherRoute from './otherRoute'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import store from '@/store'
@@ -10,7 +11,7 @@ import errPage from '@/utils/404'
 Vue.use(Router)
 export const router = new Router({
   // mode: 'history',
-  routes: routes
+  routes: routes.concat(...otherRoute)
 })
 
 NProgress.configure({ showSpinner: false })// NProgress Configuration

@@ -3,8 +3,9 @@
     <router-link :to="items.path" :key="items.path" class="tag-view" v-for="items in tagList">
       <el-tag
         :key="items.name"
-        @click.native="tagClick(items.name)"
+        @click.native="tagClick(items)"
         closable
+        :class="{'current': items.name === currentPageName}"
         @close.prevent="close(items.name)"
         :type="items.type" class="tag">
         {{items.meta.title}}
@@ -19,14 +20,33 @@ import filterName from '@/utils/includes'
 import EventBus from '@/utils/eventBus'
 export default {
   data () {
-    return {}
+    return {
+      currentPageName: this.$route.name
+    }
   },
   methods: {
-    tagClick (name) {
+    tagClick (item) {
+      const name = item.name
+      const arg = item.arg
+      const query = item.query
       // tagvisited 触发左侧边栏展开
       const flag = filterName(baseRoute, name)
       if (flag) {
         EventBus.$emit('openSidebar', flag)
+      }
+      if (arg) {
+        this.$router.push({
+          name: name,
+          params: arg
+        })
+        return
+      }
+      if (query) {
+        this.$router.push({
+          name: name,
+          query: query
+        })
+        return
       }
       this.$router.push({
         name: name
@@ -38,6 +58,11 @@ export default {
         name: name
       }
       this.$store.commit('closeTagFromOpendList', obj)
+    }
+  },
+  watch: {
+    '$route' (to) {
+      this.currentPageName = to.name
     }
   },
   computed: {
@@ -63,25 +88,23 @@ export default {
     cursor: pointer;
   }
   .tag-view{
-    position: relative;
-    &.router-link-active{
-      .el-tag{
-        background-color: #409EFF;
-        color: #fff !important;
-        border-color: #409EFF;
-        padding: 0 12px;
-        padding-left: 20px;
-        &:after{
-          display: block;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background-color: #fff;
-          content: '';
-          position: absolute;
-          top: 6px;
-          left: 8px;
-        }
+    .current{
+      background-color: #409EFF;
+      color: #fff !important;
+      border-color: #409EFF;
+      padding: 0 12px;
+      padding-left: 20px;
+      position: relative;
+      &:after{
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 8px;
       }
       .el-icon-close{
         color: #fff;

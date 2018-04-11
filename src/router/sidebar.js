@@ -129,6 +129,31 @@ export const baseRoute = [
     ]
   },
   {
+    path: '/advanced',
+    name: 'advanced',
+    icon: 'example',
+    title: '高级路由',
+    component: Main,
+    children: [
+      {
+        path: 'active',
+        name: 'active_index',
+        meta: {
+          title: '动态路由'
+        },
+        component: () => import('@/views/router-demo/index-one.vue')
+      },
+      {
+        path: 'send',
+        name: 'send_index',
+        meta: {
+          title: '带参页面'
+        },
+        component: () => import('@/views/router-demo/index-two.vue')
+      }
+    ]
+  },
+  {
     path: '/setting',
     name: 'set',
     icon: 'qq',
