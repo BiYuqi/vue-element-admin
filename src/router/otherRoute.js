@@ -1,5 +1,5 @@
 import Main from '@/views/Main'
-// 侧边栏路由一般都放在这里 需要权限校验
+// 非侧边栏路由一般都放在这里
 export default [
   {
     path: '/order',
