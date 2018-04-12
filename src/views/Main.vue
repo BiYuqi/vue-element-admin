@@ -23,7 +23,9 @@ export default {
     this.$store.commit('setOpenedList')
   },
   watch: {
-    '$route' (to, from) {}
+    '$route' (to, from) {
+      this.$store.commit('setCurrentPageName', to.name)
+    }
   }
 }
 </script>

@@ -43,7 +43,7 @@ export default {
           province: '上海',
           city: '普陀区',
           address: '上海市普陀区金沙江路 1518 弄',
-          zip: 1312313
+          zip: new Date().getTime()
         },
         {
           date: '2016-05-03',
@@ -51,7 +51,7 @@ export default {
           province: '上海',
           city: '普陀区',
           address: '上海市普陀区金沙江路 1518 弄',
-          zip: 423424
+          zip: new Date().getTime()
         }
       ]
     }

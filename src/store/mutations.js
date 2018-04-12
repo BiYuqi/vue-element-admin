@@ -14,7 +14,10 @@ export const mutations = {
       opendPage.query = params.query
     }
     state.pageOpenedList.splice(params.index, 1, opendPage)
-    localStorage.setItem('pageOpenedList', JSON.stringify(state.pageOpenedList))
+    // 修复路由在首页时刷新页面，pageOpenedList丢失的问题 2018-04-12 22:31
+    if (state.currentPageName && state.currentPageName !== 'dashboard_index') {
+      localStorage.setItem('pageOpenedList', JSON.stringify(state.pageOpenedList))
+    }
   },
   clearAllTags (state) {
     state.pageOpenedList.splice(1)
@@ -25,6 +28,9 @@ export const mutations = {
     if (local) {
       state.pageOpenedList = JSON.parse(localStorage.pageOpenedList)
     }
+  },
+  setCurrentPageName (state, res) {
+    state.currentPageName = res
   },
   setSidebar (state) { // 侧边栏开关
     // if (!localStorage.getItem('sidebarStatus')) {

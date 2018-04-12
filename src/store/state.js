@@ -10,7 +10,8 @@ export const state = {
   ],
   sidebarStatus: 0, // 展开
   headVisetedShow: true, // 顶部访问历史tab 是否显示
-  todoList: [
+  currentPageName: '', // 当前路由name
+  todoList: [ // todolist demo
     {
       status: 1,
       content: 'vue-element-admin持续开发维护'
@@ -39,6 +40,6 @@ export const state = {
       status: 1,
       content: '如果可以学习下PWA，小程序'
     }
-  ], // todo-list
+  ],
   errorLog: []
 }
