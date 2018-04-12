@@ -1,6 +1,8 @@
 # vue-system
 
 > vue-cli + element-ui 后台开发项目
+本项目不适合作为后台模板使用，只作为后台解决方案的一种
+本方案模板页：[模板页](https://github.com/BiYuqi/vue-admin-template)
 ## DEMO
 
 ![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-home%202018-03-31%2014.41.44.png)
