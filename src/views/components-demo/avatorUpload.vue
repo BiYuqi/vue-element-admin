@@ -1,5 +1,5 @@
 <template>
-  <div class="avator-upload">
+  <div class="avator-upload components-wrap">
     <com-intro
       leftTxt="this is based on"
       url="https://github.com/dai-siki/vue-image-crop-upload"

@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     {{ leftTxt }}
-    <a :href="url" target="_blank">
+    <a :href="realUrl" target="_blank">
       {{ urlTxt }}
     </a>
     {{ rigthTxt }}
@@ -15,13 +15,19 @@ export default {
       type: String
     },
     url: {
-      type: String
+      type: String,
+      default: ''
     },
     urlTxt: {
       type: String
     },
     rigthTxt: {
       type: String
+    }
+  },
+  computed: {
+    realUrl () {
+      return this.url ? this.url : 'javascript:;'
     }
   }
 }

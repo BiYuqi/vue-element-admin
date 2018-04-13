@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div class="dashboard components-wrap">
     <panel-group @handlePanelSelect="handlePanelSelect"></panel-group>
     <el-row :gutter="15" style="margin-bottom: 15px;">
       <el-col :span="24">

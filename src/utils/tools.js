@@ -5,7 +5,7 @@
 * HH年MM月DD月 hh:mm:ss => 2018年4月12日 22:09:30
 */
 export const format = (type, timer) => {
-  const date = ~~timer ? new Date(~~timer) : new Date()
+  const date = timer ? new Date(timer * 1) : new Date()
   const times = {
     'H+': date.getFullYear(),
     'M+': date.getMonth() + 1,

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="svg-icon-demo">
+  <div class="svg-icon-demo components-wrap">
     <div class="link">
       <a href="https://shimo.im/docs/oEVcPTwvkAI5oWhN/" target="_blank">使用方法</a>
     </div>

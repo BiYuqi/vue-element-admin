@@ -1,5 +1,5 @@
 <template>
-  <div class="json-editor">json-editor</div>
+  <div class="json-editor components-wrap">json-editor</div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="bugger">
+  <div class="bugger components-wrap">
     <error-log></error-log>
   </div>
 </template>

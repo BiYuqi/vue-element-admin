@@ -1,5 +1,5 @@
 <template>
-  <div class="back-top">
+  <div class="back-top components-wrap">
     <span v-for="item in 200" :key="item">
       这是为了测试回到顶部写的{{item}}!!!
     </span>
@@ -18,6 +18,6 @@ export default {
 
 <style lang="scss">
 .back-top{
-  height: 1024px;
+  height: 2024px;
 }
 </style>

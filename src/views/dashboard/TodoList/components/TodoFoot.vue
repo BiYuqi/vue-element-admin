@@ -30,12 +30,12 @@ export default {
     }
   },
   methods: {
-    filterList (index) {
+    filterList (index) { // filter tode data
       this.activeIndex = index
       // 0 All ===> -1
       // 1 actiev ===> 1
       // 2 computed ===> 0
-      let sign = index === 0 ? -1 : index === 1 ? 1 : 0
+      let sign = index === 0 ? -1 : index === 1 ? 1 : 0 // 点击index映射至数据status的状态 -1 刚好返回全部 1 0 代表未完成 已完成
       EventBus.$emit('todoSign', sign)
     }
   }

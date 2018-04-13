@@ -67,8 +67,8 @@ export default {
     overflow-y: scroll;
   }
   ul::-webkit-scrollbar{
-    // width: 2px;
-    // background-color: rgba(187, 187, 187, .3);
+    width: 1px;
+    background-color: rgb(62, 194, 230);
   }
   .todo-left{
     text-align: center;

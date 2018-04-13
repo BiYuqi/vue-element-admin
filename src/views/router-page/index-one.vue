@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="router-one">
+  <div class="router-one components-wrap">
     <el-row>
       <el-col :span="12">
         <card-title icon="qq" title="动态路由测试"></card-title>

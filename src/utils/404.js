@@ -9,5 +9,5 @@ export default [{
     title: '页面找不到了',
     isLocal: true // 是否被注入opendList true 不被注入
   },
-  component: () => import('@/views/errorPage/index.vue')
+  component: () => import('@/views/error-page/index.vue')
 }]

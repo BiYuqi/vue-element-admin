@@ -1,5 +1,5 @@
 <template>
-  <div class="components-container">
+  <div class="components-wrap">
     <com-intro
       leftTxt="Markedown is based on"
       url="https://github.com/sparksuite/simplemde-markdown-editor"

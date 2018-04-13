@@ -31,7 +31,7 @@ export const baseRoute = [
         meta: {
           title: '图标'
         },
-        component: () => import('@/views/IconPage/index.vue')
+        component: () => import('@/views/icon-page/index.vue')
       }
     ]
   },
@@ -69,6 +69,14 @@ export const baseRoute = [
         component: () => import('@/views/components-demo/avatorUpload.vue')
       },
       {
+        path: 'sticky',
+        name: 'sticky_index',
+        meta: {
+          title: 'Sticky'
+        },
+        component: () => import('@/views/components-demo/sticky-demo.vue')
+      },
+      {
         path: 'back-to-top',
         name: 'back_to_top',
         meta: {
@@ -91,7 +99,7 @@ export const baseRoute = [
         meta: {
           title: '表单创建'
         },
-        component: () => import('@/views/form/createForm.vue')
+        component: () => import('@/views/form-page/createForm.vue')
       },
       {
         path: 'form-editor',
@@ -99,7 +107,7 @@ export const baseRoute = [
         meta: {
           title: '编辑表单'
         },
-        component: () => import('@/views/form/editForm.vue')
+        component: () => import('@/views/form-page/editForm.vue')
       },
       {
         path: 'form-update',
@@ -107,24 +115,7 @@ export const baseRoute = [
         meta: {
           title: '表单监听'
         },
-        component: () => import('@/views/form/formUpdate.vue')
-      }
-    ]
-  },
-  {
-    path: '/test',
-    title: '小工具',
-    name: 'test',
-    icon: 'tab',
-    component: Main,
-    children: [
-      {
-        path: 'css',
-        name: 'css_index',
-        meta: {
-          title: 'CSS三角制作'
-        },
-        component: () => import('@/views/components-demo/cssSet.vue')
+        component: () => import('@/views/form-page/formUpdate.vue')
       }
     ]
   },
@@ -141,7 +132,7 @@ export const baseRoute = [
         meta: {
           title: '动态路由'
         },
-        component: () => import('@/views/router-demo/index-one.vue')
+        component: () => import('@/views/router-page/index-one.vue')
       },
       {
         path: 'send',
@@ -149,7 +140,7 @@ export const baseRoute = [
         meta: {
           title: '带参页面'
         },
-        component: () => import('@/views/router-demo/index-two.vue')
+        component: () => import('@/views/router-page/index-two.vue')
       }
     ]
   },
@@ -167,6 +158,23 @@ export const baseRoute = [
           access: ['admin']
         },
         component: () => import('@/views/components-demo/setting.vue')
+      }
+    ]
+  },
+  {
+    path: '/test',
+    title: '小工具',
+    name: 'test',
+    icon: 'tab',
+    component: Main,
+    children: [
+      {
+        path: 'css',
+        name: 'css_index',
+        meta: {
+          title: 'CSS三角制作'
+        },
+        component: () => import('@/views/components-demo/cssSet.vue')
       }
     ]
   },

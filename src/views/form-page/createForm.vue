@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="editor-form">editor-form</div>
+  <div class="create-from components-wrap">form-create</div>
 </template>
 
 <script>

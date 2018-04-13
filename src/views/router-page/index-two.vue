@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="create-from">form-create</div>
+  <div class="router-two components-wrap"></div>
 </template>
 
 <script>

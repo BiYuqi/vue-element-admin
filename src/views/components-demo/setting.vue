@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="setting-wrap">
+  <div class="setting-wrap components-wrap">
     <el-switch
       v-model="showTabs"
       @change="switchStatus"

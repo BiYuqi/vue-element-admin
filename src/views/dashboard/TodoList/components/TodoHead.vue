@@ -28,6 +28,7 @@ export default {
         status: 1,
         content: this.todoCon
       }
+      // add content
       this.$store.commit('addTodoList', obj)
       this.todoCon = ''
     }

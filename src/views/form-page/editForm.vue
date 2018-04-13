@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="router-two"></div>
+  <div class="editor-form components-wrap">editor-form</div>
 </template>
 
 <script>
