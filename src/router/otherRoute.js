@@ -10,7 +10,7 @@ export default [
         path: 'order/:id',
         name: 'order_index',
         meta: {
-          title: '订单详情'
+          title: 'orderDetail'
         },
         component: () => import('@/views/router-page/order.vue')
       }
@@ -25,7 +25,7 @@ export default [
         path: 'shop',
         name: 'shop_index',
         meta: {
-          title: '商店详情'
+          title: 'shopingDetail'
         },
         component: () => import('@/views/router-page/shop.vue')
       }

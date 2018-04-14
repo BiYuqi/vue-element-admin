@@ -8,7 +8,7 @@
         :class="{'current': items.name === currentPageName}"
         @close.prevent="close(items.name)"
         :type="items.type" class="tag">
-        {{items.meta.title}}
+        {{generateTitleTrans(items.meta.title)}}
       </el-tag>
     </router-link>
   </div>
@@ -16,12 +16,14 @@
 
 <script>
 import { baseRoute } from '@/router/sidebar'
+import { generateTitle } from '@/utils/i18n'
 import filterName from '@/utils/includes'
 import EventBus from '@/utils/eventBus'
 export default {
   data () {
     return {
-      currentPageName: this.$route.name
+      currentPageName: this.$route.name,
+      generateTitleTrans: generateTitle
     }
   },
   methods: {

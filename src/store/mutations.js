@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie'
 export const mutations = {
   increateTag (state, tagObj) {
     if (tagObj && tagObj.meta && tagObj.meta.isLocal) { // 过滤不需要加入tagview的组件
@@ -80,5 +81,9 @@ export const mutations = {
   },
   addErrorLog (state, msg) {
     state.errorLog.push(msg)
+  },
+  setLanguage (state, lang) {
+    state.language = lang
+    Cookies.set('language', lang)
   }
 }

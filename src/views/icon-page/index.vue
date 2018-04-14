@@ -10,7 +10,7 @@
             {{renderIcon(item)}}
           </div>
           <div>
-            <svg-icon :name="item" class="icon-demo"/>
+            <svg-icon :name="item" :size="26" class="icon-demo"/>
             <span>{{item}}</span>
           </div>
         </el-tooltip>

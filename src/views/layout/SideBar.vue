@@ -16,11 +16,11 @@
           <el-submenu :index="item.name" :key="item.name">
             <template slot="title">
               <svg-icon :name="item.icon"></svg-icon>
-              <span>{{ item.title }}</span>
+              <span>{{ generateTitleTrans(item.title) }}</span>
             </template>
             <router-link :to="item.path+'/'+items.path" :key="items.path" class="route-link" v-for="items in item.children">
               <el-menu-item :index="items.name||items.path">
-                <span>{{ items.meta.title }}</span>
+                <span>{{ generateTitleTrans(items.meta.title) }}</span>
               </el-menu-item>
             </router-link>
           </el-submenu>
@@ -29,7 +29,7 @@
           <router-link :to="item.path+'/'+items.path" :key="items.path" class="route-link" v-for="items in item.children">
             <el-menu-item :index="items.name||items.path">
               <svg-icon :name="item.icon"></svg-icon>
-              <span slot="title">{{ items.meta.title }}</span>
+              <span slot="title">{{ generateTitleTrans(items.meta.title) }}</span>
             </el-menu-item>
           </router-link>
         </template>
@@ -37,7 +37,7 @@
           <router-link :to="item.path" :key="item.path" class="route-link">
             <el-menu-item :index="item.name||item.path">
                 <svg-icon :name="item.icon"></svg-icon>
-                <span slot="title">{{ item.title }}</span>
+                <span slot="title">{{ generateTitleTrans(item.title) }}</span>
             </el-menu-item>
           </router-link>
         </template>
@@ -48,10 +48,13 @@
 
 <script>
 import EventBus from '@/utils/eventBus'
+import { generateTitle } from '@/utils/i18n'
 import { mapGetters } from 'vuex'
 export default {
   data () {
-    return {}
+    return {
+      generateTitleTrans: generateTitle
+    }
   },
   computed: {
     ...mapGetters('permiss', [
@@ -70,6 +73,8 @@ export default {
         name: key
       })
     }
+  },
+  mounted () {
   },
   created () {
     // tagvisited 触发左侧边栏展开

@@ -1,7 +1,8 @@
+import Cookies from 'js-cookie'
 export const state = {
   pageOpenedList: [
     {
-      meta: {title: '首页'},
+      meta: {title: 'dashboard'},
       name: 'dashboard_index',
       path: '/dashboard',
       arg: {},
@@ -11,6 +12,7 @@ export const state = {
   sidebarStatus: 0, // 展开
   headVisetedShow: true, // 顶部访问历史tab 是否显示
   currentPageName: '', // 当前路由name
+  language: Cookies.get('language') || 'en',
   todoList: [ // todolist demo
     {
       status: 0,

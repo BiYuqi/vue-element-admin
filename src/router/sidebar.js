@@ -12,7 +12,7 @@ export const baseRoute = [
         path: 'dashboard',
         name: 'dashboard_index',
         meta: {
-          title: '首页'
+          title: 'dashboard'
         },
         component: () => import('@/views/dashboard/dashboard.vue')
       }
@@ -29,7 +29,7 @@ export const baseRoute = [
         path: 'icon',
         name: 'icon_index',
         meta: {
-          title: '图标'
+          title: 'icons'
         },
         component: () => import('@/views/icon-page/index.vue')
       }
@@ -39,14 +39,14 @@ export const baseRoute = [
     path: '/compoents',
     name: 'compoents',
     component: Main,
-    title: '组件库',
+    title: 'components',
     icon: 'component',
     children: [
       {
         path: 'markdown',
         name: 'markdown',
         meta: {
-          title: 'Markdown',
+          title: 'markdown',
           access: ['admin']
         },
         component: () => import('@/views/components-demo/markdown.vue')
@@ -55,7 +55,7 @@ export const baseRoute = [
         path: 'json-editor',
         name: 'json_editor',
         meta: {
-          title: 'JSON编辑器',
+          title: 'jsonEditor',
           access: ['admin']
         },
         component: () => import('@/views/components-demo/jsonEditor.vue')
@@ -64,7 +64,7 @@ export const baseRoute = [
         path: 'avator-upload',
         name: 'avator_upload',
         meta: {
-          title: '头像上传'
+          title: 'avatarUpload'
         },
         component: () => import('@/views/components-demo/avatorUpload.vue')
       },
@@ -72,7 +72,7 @@ export const baseRoute = [
         path: 'sticky',
         name: 'sticky_index',
         meta: {
-          title: 'Sticky'
+          title: 'sticky'
         },
         component: () => import('@/views/components-demo/sticky-demo.vue')
       },
@@ -80,7 +80,7 @@ export const baseRoute = [
         path: 'little',
         name: 'little_index',
         meta: {
-          title: '小组件'
+          title: 'componentMixin'
         },
         component: () => import('@/views/components-demo/little-demo.vue')
       },
@@ -88,7 +88,7 @@ export const baseRoute = [
         path: 'back-to-top',
         name: 'back_to_top',
         meta: {
-          title: '返回顶部'
+          title: 'backToTop'
         },
         component: () => import('@/views/components-demo/backToTop.vue')
       }
@@ -96,7 +96,7 @@ export const baseRoute = [
   },
   {
     path: '/form',
-    title: '表单',
+    title: 'form',
     name: 'form',
     icon: 'form',
     component: Main,
@@ -105,7 +105,7 @@ export const baseRoute = [
         path: 'form-creat',
         name: 'form_creat',
         meta: {
-          title: '表单创建'
+          title: 'createForm'
         },
         component: () => import('@/views/form-page/createForm.vue')
       },
@@ -113,7 +113,7 @@ export const baseRoute = [
         path: 'form-editor',
         name: 'form_editor',
         meta: {
-          title: '编辑表单'
+          title: 'editForm'
         },
         component: () => import('@/views/form-page/editForm.vue')
       },
@@ -121,7 +121,7 @@ export const baseRoute = [
         path: 'form-update',
         name: 'form_update',
         meta: {
-          title: '表单监听'
+          title: 'listenForm'
         },
         component: () => import('@/views/form-page/formUpdate.vue')
       }
@@ -131,14 +131,14 @@ export const baseRoute = [
     path: '/advanced',
     name: 'advanced',
     icon: 'example',
-    title: '高级路由',
+    title: 'highRoute',
     component: Main,
     children: [
       {
         path: 'active',
         name: 'active_index',
         meta: {
-          title: '动态路由'
+          title: 'dynamicRoute'
         },
         component: () => import('@/views/router-page/index-one.vue')
       },
@@ -146,7 +146,7 @@ export const baseRoute = [
         path: 'send',
         name: 'send_index',
         meta: {
-          title: '带参页面'
+          title: 'paramRoute'
         },
         component: () => import('@/views/router-page/index-two.vue')
       }
@@ -157,12 +157,13 @@ export const baseRoute = [
     name: 'set',
     icon: 'qq',
     component: Main,
+    title: 'setting',
     children: [
       {
         path: 'setting',
         name: 'setting_index',
         meta: {
-          title: '配置',
+          title: 'setting',
           access: ['admin']
         },
         component: () => import('@/views/components-demo/setting.vue')
@@ -171,7 +172,7 @@ export const baseRoute = [
   },
   {
     path: '/test',
-    title: '小工具',
+    title: '小工具', // 后期再翻译
     name: 'test',
     icon: 'tab',
     component: Main,
@@ -180,7 +181,7 @@ export const baseRoute = [
         path: 'css',
         name: 'css_index',
         meta: {
-          title: 'CSS三角制作'
+          title: 'cssAngle'
         },
         component: () => import('@/views/components-demo/cssSet.vue')
       }
@@ -191,12 +192,13 @@ export const baseRoute = [
     name: 'bug',
     icon: 'bug',
     component: Main,
+    title: 'bug',
     children: [
       {
         path: 'bug',
         name: 'bug_index',
         meta: {
-          title: '错误日志',
+          title: 'errorBug',
           access: ['admin']
         },
         component: () => import('@/views/components-demo/bugPage.vue')

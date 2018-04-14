@@ -1,10 +1,8 @@
 <template>
   <div class="header-wrap">
-    <svg-ic class="header-icon"
-            name="switch"
-            :class="{collapse: collapse}"
-            @click.native="changeTab">
-    </svg-ic>
+    <svg-icon class="header-icon" :size="18" name="switch" :class="{collapse: collapse}" @click.native="changeTab">
+    </svg-icon>
+    <language-trans class="language-trans"></language-trans>
     <el-dropdown trigger="click" size="small" class="user-info" @command="handleCommand">
       <span class="el-dropdown-link">
         <svg-icon name="boy" class="avatar"></svg-icon>
@@ -20,10 +18,10 @@
 
 <script>
 import Cookie from 'js-cookie'
-import SvgIc from '@/components/SvgIcon'
+import languageTrans from '@/components/LangSelect'
 export default {
   components: {
-    SvgIc
+    languageTrans
   },
   methods: {
     goBack () {

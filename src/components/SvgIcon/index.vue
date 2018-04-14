@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon" :class="iconClass">
+  <svg class="icon" :class="iconClass" :style="{'font-size': size + 'px'}">
     <use :xlink:href="'#'+Icons[name].default.id"></use>
   </svg>
 </template>
@@ -12,6 +12,10 @@ export default {
       type: String,
       required: true,
       default: ''
+    },
+    size: {
+      type: Number,
+      default: 15
     }
   },
   data () {

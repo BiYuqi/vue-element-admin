@@ -6,13 +6,17 @@ import {router} from './router'
 import store from './store'
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import './errorLog'
 import SvgIcon from '@/components/SvgIcon'
+
+import './errorLog'
+
+import i18n from './lang'
 
 Vue.component('svg-icon', SvgIcon)
 Vue.config.productionTip = false
 
 Vue.use(ElementUi)
+
 // add baidu count
 if (process.env.NODE_ENV === 'production') {
   let hm = document.createElement('script')
@@ -20,9 +24,11 @@ if (process.env.NODE_ENV === 'production') {
   let s = document.getElementsByTagName('script')[0]
   s.parentNode.insertBefore(hm, s)
 }
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  i18n,
   router,
   store,
   render: h => h(App)
