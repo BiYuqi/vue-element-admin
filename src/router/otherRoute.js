@@ -12,7 +12,7 @@ export default [
         meta: {
           title: '订单详情'
         },
-        component: () => import('@/views/router-demo/order.vue')
+        component: () => import('@/views/router-page/order.vue')
       }
     ]
   },
@@ -27,7 +27,7 @@ export default [
         meta: {
           title: '商店详情'
         },
-        component: () => import('@/views/router-demo/shop.vue')
+        component: () => import('@/views/router-page/shop.vue')
       }
     ]
   }

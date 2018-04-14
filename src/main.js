@@ -13,7 +13,13 @@ Vue.component('svg-icon', SvgIcon)
 Vue.config.productionTip = false
 
 Vue.use(ElementUi)
-
+// add baidu count
+if (process.env.NODE_ENV === 'production') {
+  let hm = document.createElement('script')
+  hm.src = 'https://hm.baidu.com/hm.js?0b2c26b40000cc8d4a441a66a12bc772'
+  let s = document.getElementsByTagName('script')[0]
+  s.parentNode.insertBefore(hm, s)
+}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

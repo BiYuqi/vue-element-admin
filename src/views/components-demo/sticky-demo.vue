@@ -25,7 +25,7 @@
         leftTxt="Sticky 当页面滚动到预设的位置会吸附在顶部，内容自定义"
         ></com-intro>
       <div class="test">
-        <p v-for="item in 20">placeholder</p>
+        <p v-for="item in 20" :key="item">placeholder{{item}}</p>
       </div>
     </div>
   </div>
