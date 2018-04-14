@@ -79,6 +79,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../styles/mixin.scss';
 .material_input_focus{
   .material_input_focus_line{
     position: relative;
@@ -90,7 +91,7 @@ export default {
       left: 0;
       width: 100%;
       height: 1px;
-      background-color: #999;
+      background-color: $borderColor;
       &:after{
         position: absolute;
         display: block;

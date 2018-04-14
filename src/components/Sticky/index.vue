@@ -60,6 +60,7 @@ export default {
     position: relative;
     padding-right: 30px;
     top: 0;
+    z-index: 999999;
     &.active{
       position: fixed;
     }

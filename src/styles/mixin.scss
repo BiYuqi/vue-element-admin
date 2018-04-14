@@ -39,3 +39,8 @@
         -ms-transform: translate($x,$y);
             transform: translate($x,$y);
 }
+@mixin mr($z) {
+  margin-bottom: $z;
+}
+$baseColor: #409EFF; // 全局蓝色主色系
+$borderColor: #dcdfe6;
