@@ -13,7 +13,7 @@ export const state = {
   currentPageName: '', // 当前路由name
   todoList: [ // todolist demo
     {
-      status: 1,
+      status: 0,
       content: 'vue-element-admin持续开发维护'
     },
     {

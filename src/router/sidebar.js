@@ -77,10 +77,18 @@ export const baseRoute = [
         component: () => import('@/views/components-demo/sticky-demo.vue')
       },
       {
+        path: 'little',
+        name: 'little_index',
+        meta: {
+          title: '小组件'
+        },
+        component: () => import('@/views/components-demo/little-demo.vue')
+      },
+      {
         path: 'back-to-top',
         name: 'back_to_top',
         meta: {
-          title: 'BackTop'
+          title: '返回顶部'
         },
         component: () => import('@/views/components-demo/backToTop.vue')
       }
