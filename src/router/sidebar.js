@@ -155,7 +155,7 @@ export const baseRoute = [
   {
     path: '/setting',
     name: 'set',
-    icon: 'qq',
+    icon: 'setting',
     component: Main,
     title: 'setting',
     children: [

@@ -24,7 +24,6 @@ if (process.env.NODE_ENV === 'production') {
   let s = document.getElementsByTagName('script')[0]
   s.parentNode.insertBefore(hm, s)
 }
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

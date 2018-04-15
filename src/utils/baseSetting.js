@@ -1,7 +1,7 @@
+import store from '../store'
 /**
 * 全局基础配置文件
 */
-import store from '../store'
 let util = {}
 util.title = (title) => {
   title = title || ''

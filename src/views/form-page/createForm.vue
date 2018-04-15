@@ -25,7 +25,7 @@
         </div>
       </sticky-pan>
       <div class="components-wrap">
-        <input-focus v-model="formInfo.title" class="mrb"></input-focus>
+        <input-focus v-model="formInfo.title" bolder class="mrb"></input-focus>
         <el-row :gultter="20">
           <el-col :xs="8" :md="6">
             <el-form-item label="作者：">

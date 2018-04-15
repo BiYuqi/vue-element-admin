@@ -15,7 +15,7 @@
         <template v-if="item.children && item.children.length > 1">
           <el-submenu :index="item.name" :key="item.name">
             <template slot="title">
-              <svg-icon :name="item.icon"></svg-icon>
+              <svg-icon :name="item.icon" :size="16"></svg-icon>
               <span>{{ generateTitleTrans(item.title) }}</span>
             </template>
             <router-link :to="item.path+'/'+items.path" :key="items.path" class="route-link" v-for="items in item.children">
@@ -28,7 +28,7 @@
         <template v-else-if="item.children && item.children.length === 1">
           <router-link :to="item.path+'/'+items.path" :key="items.path" class="route-link" v-for="items in item.children">
             <el-menu-item :index="items.name||items.path">
-              <svg-icon :name="item.icon"></svg-icon>
+              <svg-icon :name="item.icon" :size="16"></svg-icon>
               <span slot="title">{{ generateTitleTrans(items.meta.title) }}</span>
             </el-menu-item>
           </router-link>
@@ -36,7 +36,7 @@
         <template v-else>
           <router-link :to="item.path" :key="item.path" class="route-link">
             <el-menu-item :index="item.name||item.path">
-                <svg-icon :name="item.icon"></svg-icon>
+                <svg-icon :name="item.icon" :size="16"></svg-icon>
                 <span slot="title">{{ generateTitleTrans(item.title) }}</span>
             </el-menu-item>
           </router-link>

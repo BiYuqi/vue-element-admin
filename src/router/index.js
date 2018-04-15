@@ -8,6 +8,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import store from '@/store'
 import errPage from '@/utils/404'
+import i18n from '../lang'
 Vue.use(Router)
 export const router = new Router({
   // mode: 'history',
@@ -17,10 +18,10 @@ export const router = new Router({
 NProgress.configure({ showSpinner: false })// NProgress Configuration
 
 router.beforeEach((to, from, next) => {
-  Util.opendPage(router.app, to.name, to.params, to.query, to.meta, to.path)
   NProgress.start()
+  Util.opendPage(router.app, to.name, to.params, to.query, to.meta, to.path)
   const title = to.meta.title
-  Util.title(title)
+  Util.title(i18n.vm.messages[i18n.vm.locale]['route'][title]) // translate zh <=> en
   if (!Cookie.get('user') && to.name !== 'login') {
     next({
       replace: true,

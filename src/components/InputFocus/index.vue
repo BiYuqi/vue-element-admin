@@ -4,7 +4,7 @@
       <svg-icon v-if="iconName" name="search" class="input-icon"></svg-icon>
       <i class="material_input_text" :class="textClass">{{ text }}</i>
       <span class="line"></span>
-      <input @input="handleInput" @focus="handleFocus" @blur="handleBulr" :style="{height: height - 4 + 'px'}" :placeholder="placeholder">
+      <input @input="handleInput" @focus="handleFocus" @blur="handleBulr" :class="isBolder" :style="{height: height - 4 + 'px'}" :placeholder="placeholder">
     </div>
   </div>
 </template>
@@ -28,6 +28,10 @@ export default {
     iconName: {
       type: String,
       default: ''
+    },
+    bolder: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -46,6 +50,11 @@ export default {
       return {
         'material_input_text_active': this.isFocus,
         'is-icon': !this.iconName
+      }
+    },
+    isBolder () {
+      return {
+        'is-bolder': this.bolder
       }
     }
   },
@@ -162,6 +171,9 @@ export default {
     outline: none;
     width: 100%;
     padding-left: 30px;
+  }
+  .is-bolder{
+    font-weight: bold;
   }
 }
 </style>

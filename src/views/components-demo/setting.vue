@@ -20,6 +20,7 @@ export default {
   methods: {
     switchStatus () {
       this.$store.commit('setHeadVisetedShow')
+      this.$toast('Hello', 2000)
     }
   },
   mounted () {
@@ -30,7 +31,7 @@ export default {
     }
 
     getStarCount('facebook', 'react').then(stargazersCount => {
-      console.log(stargazersCount)
+      // console.log(stargazersCount)
     })
   }
 }
