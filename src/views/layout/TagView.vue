@@ -36,21 +36,29 @@ export default {
       if (flag) {
         EventBus.$emit('openSidebar', flag)
       }
-      if (arg) {
+      if (arg) { // 带有params参数
         this.$router.push({
           name: name,
           params: arg
         })
         return
       }
-      if (query) {
+      if (query) { // 带有query参数
         this.$router.push({
           name: name,
           query: query
         })
         return
       }
-      this.$router.push({
+      if (query && arg) { // 同时带有params&query参数
+        this.$router.push({
+          name: name,
+          params: arg,
+          query: query
+        })
+        return
+      }
+      this.$router.push({ // 无参数
         name: name
       })
     },

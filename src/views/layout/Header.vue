@@ -37,10 +37,10 @@ export default {
         case 'loginout':
           Cookie.remove('user')
           Cookie.remove('role')
-          localStorage.removeItem('pageOpenedList')
           this.$store.commit('clearAllTags')
           this.$store.commit('user/RESET_ROLE') // 清除角色
           this.$store.commit('permiss/RM_ROUTES') // 清空routes for sidebar
+          localStorage.removeItem('pageOpenedList')
           setTimeout(() => {
             // 为了修复直接通过vue-router 无刷新退出 导致 Duplicate named routes definition bug
             // 刷新是为了清空 路由源保留的路由状态

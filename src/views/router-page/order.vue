@@ -13,8 +13,10 @@ export default {
       format: format
     }
   },
-  currentOrder () {
-    return this.$route.params.id
+  computed: {
+    currentOrder () {
+      return this.$route.params.id
+    }
   }
 }
 </script>
