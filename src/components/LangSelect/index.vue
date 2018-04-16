@@ -1,6 +1,6 @@
 <template>
   <div class="set-language">
-    <el-dropdown @command="handleCommand">
+    <el-dropdown @command="handleCommand" trigger="click">
       <span class="el-dropdown-link">
         <svg-icon name="earth" :size="20"/>
       </span>

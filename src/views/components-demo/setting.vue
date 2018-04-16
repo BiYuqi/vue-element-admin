@@ -20,7 +20,6 @@ export default {
   methods: {
     switchStatus () {
       this.$store.commit('setHeadVisetedShow')
-      this.$toast('Hello', 2000)
     }
   },
   mounted () {
