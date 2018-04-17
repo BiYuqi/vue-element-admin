@@ -20,6 +20,9 @@ export default {
     cssAngle: '三角形制作',
     errorBug: '错误日志',
     orderDetail: '订单详情',
-    shopingDetail: '商店详情'
+    shopingDetail: '商店详情',
+    composite: '综合实例',
+    table: '表格',
+    tab: 'Tab'
   }
 }

@@ -7,10 +7,8 @@ import store from './store'
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import SvgIcon from '@/components/SvgIcon'
-
-import './errorLog'
-
 import i18n from './lang'
+import './errorLog'
 
 Vue.component('svg-icon', SvgIcon)
 Vue.config.productionTip = false

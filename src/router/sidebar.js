@@ -36,7 +36,7 @@ export const baseRoute = [
     ]
   },
   {
-    path: '/compoents',
+    path: '/compoents', // 组件库
     name: 'compoents',
     component: Main,
     title: 'components',
@@ -95,7 +95,7 @@ export const baseRoute = [
     ]
   },
   {
-    path: '/form',
+    path: '/form', // 表单
     title: 'form',
     name: 'form',
     icon: 'form',
@@ -128,7 +128,7 @@ export const baseRoute = [
     ]
   },
   {
-    path: '/advanced',
+    path: '/advanced', // 高级路由
     name: 'advanced',
     icon: 'example',
     title: 'highRoute',
@@ -149,6 +149,31 @@ export const baseRoute = [
           title: 'paramRoute'
         },
         component: () => import('@/views/router-page/index-two.vue')
+      }
+    ]
+  },
+  {
+    path: '/composite', // 综合实例
+    name: 'composite',
+    icon: 'example',
+    title: 'composite',
+    component: Main,
+    children: [
+      {
+        path: 'table',
+        name: 'table_index',
+        meta: {
+          title: 'table'
+        },
+        component: () => import('@/views/composite-demo/table/index.vue')
+      },
+      {
+        path: 'tab',
+        name: 'tab_index',
+        meta: {
+          title: 'tab'
+        },
+        component: () => import('@/views/composite-demo/tab/index.vue')
       }
     ]
   },

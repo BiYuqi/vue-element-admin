@@ -20,6 +20,9 @@ export default {
     cssAngle: 'CSS Angle',
     errorBug: 'Error Bug',
     orderDetail: 'Order Detail',
-    shopingDetail: 'Shoping Detail'
+    shopingDetail: 'Shoping Detail',
+    composite: 'Composite',
+    table: 'Table',
+    tab: 'Tab'
   }
 }
