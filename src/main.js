@@ -8,12 +8,16 @@ import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import SvgIcon from '@/components/SvgIcon'
 import i18n from './lang'
+import Wave from '@/directive/wave/index'
 import './errorLog'
 
 Vue.component('svg-icon', SvgIcon)
 Vue.config.productionTip = false
 
 Vue.use(ElementUi)
+Vue.use(Wave, {
+  type: 'center'
+})
 
 // add baidu count
 if (process.env.NODE_ENV === 'production') {
