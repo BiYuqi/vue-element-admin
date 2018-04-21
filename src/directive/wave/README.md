@@ -10,3 +10,7 @@ Vue.use(Wave, {
   color: 'rbga(0, 0, 0, .2)'
 })
 ```
+```html
+<!-- use in vue template -->
+<el-button type="primary" v-wave>点击测试</el-button>
+```

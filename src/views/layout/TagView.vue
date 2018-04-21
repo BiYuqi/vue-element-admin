@@ -1,16 +1,18 @@
 <template lang="html">
-  <div class="tag-wrap" v-if="headVisetedShow && tagList.length > 0">
-    <router-link :to="items.path" :key="items.path" class="tag-view" v-for="items in tagList">
-      <el-tag
-        :key="items.name"
-        @click.native="tagClick(items)"
-        closable
-        :class="{'current': items.name === currentPageName}"
-        @close.prevent="close(items.name)"
-        :type="items.type" class="tag">
-        {{generateTitleTrans(items.meta.title)}}
-      </el-tag>
-    </router-link>
+  <div class="tag-wrap" ref="tagWrap" v-if="headVisetedShow && tagList.length > 0">
+    <div class="tag-overflow" ref="tagOver">
+      <router-link :to="items.path" :key="items.path" class="tag-view" v-for="items in tagList">
+        <el-tag
+          :key="items.name"
+          @click.native="tagClick(items)"
+          closable
+          :class="{'current': items.name === currentPageName}"
+          @close.prevent="close(items.name)"
+          :type="items.type" class="tag">
+          {{generateTitleTrans(items.meta.title)}}
+        </el-tag>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -73,7 +75,19 @@ export default {
   watch: {
     '$route' (to) {
       this.currentPageName = to.name
+    },
+    '$store.state.sidebarStatus': { // 监听侧边栏变化
+      handler (status) {
+        // 预留位置
+      },
+      deep: true
     }
+  },
+  mounted () {
+    setTimeout(() => {
+      const rect = this.$refs.tagOver.getBoundingClientRect()
+      this.$refs.tagOver.style.width = rect.width + 'px'
+    }, 0)
   },
   computed: {
     tagList () {
@@ -94,9 +108,12 @@ export default {
   border-bottom: 1px solid #d8dce5;
   padding: 0 10px;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.12), 0 0 3px 0 rgba(0,0,0,.04);
+  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  width: 100%;
+  &::-webkit-scrollbar{
+    height: 0;
+  }
   a{
     display: inline-block;
   }
@@ -147,6 +164,10 @@ export default {
         transform: scale(1);
       }
     }
+  }
+  .tag-overflow{
+    display: flex;
+    justify-content: flex-start;
   }
 }
 </style>

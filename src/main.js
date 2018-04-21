@@ -1,23 +1,31 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+// 导入Vue框架
 import Vue from 'vue'
+// 导入主视图文件
 import App from './App'
+// 导入路由文件
 import {router} from './router'
+// 导入状态管理器
 import store from './store'
+// 导入element组件
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// 导入全局svg-icon组件
 import SvgIcon from '@/components/SvgIcon'
+// 导入中英互译组件
 import i18n from './lang'
+// 导入点击波浪组件
 import Wave from '@/directive/wave/index'
+// 导入global error component
 import './errorLog'
 
+// 注册全局svg-icon组件
 Vue.component('svg-icon', SvgIcon)
 Vue.config.productionTip = false
 
+// 使用element-ui
 Vue.use(ElementUi)
-Vue.use(Wave, {
-  type: 'center'
-})
+// 使用v-wave 波浪效果
+Vue.use(Wave)
 
 // add baidu count
 if (process.env.NODE_ENV === 'production') {

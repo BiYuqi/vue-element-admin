@@ -4,7 +4,7 @@ export const baseRoute = [
   {
     path: '',
     component: Main,
-    title: '首页',
+    title: 'dashboard',
     icon: 'dashboard',
     redirect: '/dashboard',
     children: [
@@ -20,7 +20,7 @@ export const baseRoute = [
   },
   {
     path: '/icon',
-    title: '图标',
+    title: 'icons',
     name: 'icon',
     icon: 'icon',
     component: Main,

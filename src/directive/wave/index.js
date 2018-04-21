@@ -33,7 +33,7 @@ BtnWave.install = (Vue, options) => {
       })
     },
     unbind () {
-      console.log('啥时候失效呢')
+      // console.log('啥时候失效呢')
     }
   })
 }
