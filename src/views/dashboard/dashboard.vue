@@ -71,7 +71,7 @@ export default {
 <style lang="scss">
 .dashboard{
   position: relative;
-  padding-top: 50px !important;
+  padding-top: 40px !important;
   .main-line{
     width: 100%;
     margin-bottom: 15px;

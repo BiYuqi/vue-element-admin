@@ -16,7 +16,7 @@
           :value="item.value">
         </el-option>
       </el-select>
-      <el-button type="primary" style="width:100%;" @click="loginIn('ruleForm')">登录</el-button>
+      <el-button type="primary" style="width:100%;" :loading="loading" @click="loginIn('ruleForm')">登录</el-button>
     </el-form>
   </div>
 </template>
@@ -71,11 +71,13 @@ export default {
           value: 'user'
         }
       ],
-      userRole: 'admin'
+      userRole: 'admin', // static role
+      loading: false
     }
   },
   methods: {
     loginIn (formName) {
+      this.loading = true
       this.$refs[formName].validate((valid) => {
         if (valid) {
           Cookie.set('user', this.formItem.account)
@@ -83,6 +85,9 @@ export default {
           this.$router.push({
             path: 'dashboard'
           })
+          setTimeout(() => { // mock network slow
+            this.loading = false
+          }, 1000)
         } else {
           return false
         }
