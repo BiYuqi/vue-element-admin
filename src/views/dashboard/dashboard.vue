@@ -72,6 +72,7 @@ export default {
 .dashboard{
   position: relative;
   padding-top: 40px !important;
+  overflow: hidden;
   .main-line{
     width: 100%;
     margin-bottom: 15px;
