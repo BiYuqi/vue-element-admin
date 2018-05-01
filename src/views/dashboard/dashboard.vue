@@ -1,8 +1,10 @@
 <template>
   <div class="dashboard components-wrap">
-    <a class="github_logo" href="https://github.com/BiYuqi/vue-element-admin" target="_blank">
-      <svg-icon class="github_people" :size="20" name="github"/>
-    </a>
+    <div class="github-wrap">
+      <a class="github_logo" href="https://github.com/BiYuqi/vue-element-admin" target="_blank">
+        <svg-icon class="github_people" :size="20" name="github"/>
+      </a>
+    </div>
     <panel-group @handlePanelSelect="handlePanelSelect"></panel-group>
     <el-row :gutter="15" style="margin-bottom: 15px;">
       <el-col :span="24">
@@ -72,26 +74,19 @@ export default {
 .dashboard{
   position: relative;
   padding-top: 40px !important;
-  overflow: hidden;
+  // overflow: hidden;
   .main-line{
     width: 100%;
     margin-bottom: 15px;
   }
+  .github-wrap{
+    position: relative;
+    // height: 50px;
+  }
   .github_logo{
     position: absolute;
-    top: -40px;
-    right: -40px;
-    border: 40px solid transparent;
-    border-top-color: #409EFF;
-    transform: rotateZ(-135deg);
-    .github_people{
-      position: absolute;
-      top: -34px;
-      right: -5px;
-      z-index: 999;
-      transform: rotateZ(135deg);
-      color: #fff;
-    }
+    top: -26px;
+    right: 0px;
   }
 }
 </style>

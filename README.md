@@ -19,9 +19,13 @@
 本方案模板页：[模板页](https://github.com/BiYuqi/vue-admin-template)
 ## DEMO
 
-![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-home%202018-03-31%2014.41.44.png)
+![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-31%2011.52.51.png)
 
-![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-icon2018-03-31%2014.42.30.png)
+![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-01%2020.32.17.png)
+
+![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-01%2020.32.49.png)
+
+![](http://oiukswkar.bkt.clouddn.com/vue-admin-51.gif)
 
 ## Build Setup
 ```js
@@ -38,12 +42,4 @@ npm run dev
 
 // build for production with minification
 npm run build
-
-// run unit tests
-npm run unit
-
-// run all tests
-npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
