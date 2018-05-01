@@ -23,6 +23,7 @@ export default {
     shopingDetail: 'Shoping Detail',
     composite: 'Composite',
     table: 'Table',
-    tab: 'Tab'
+    tab: 'Tab',
+    codeEdit: 'Code Editor'
   }
 }

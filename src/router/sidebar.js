@@ -91,6 +91,14 @@ export const baseRoute = [
           title: 'backToTop'
         },
         component: () => import('@/views/components-demo/backToTop.vue')
+      },
+      {
+        path: 'code-edit',
+        name: 'code-edit',
+        meta: {
+          title: 'codeEdit'
+        },
+        component: () => import('@/views/components-demo/codeEdit.vue')
       }
     ]
   },

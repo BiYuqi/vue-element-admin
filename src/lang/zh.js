@@ -23,6 +23,7 @@ export default {
     shopingDetail: '商店详情',
     composite: '综合实例',
     table: '表格',
-    tab: 'Tab'
+    tab: 'Tab',
+    codeEdit: '代码编辑器'
   }
 }
