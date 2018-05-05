@@ -1,7 +1,15 @@
 <template>
   <div class="header-wrap">
-    <svg-icon class="header-icon" :size="18" name="switch" :class="{collapse: collapse}" @click.native="changeTab">
+    <svg-icon
+      class="header-icon"
+      :size="18"
+      name="switch"
+      :class="{collapse: collapse}"
+      @click.native="changeTab">
     </svg-icon>
+    <a class="github_logo" href="https://github.com/BiYuqi/vue-element-admin" target="_blank">
+      <svg-icon class="github_people" :size="24" name="github"/>
+    </a>
     <language-trans class="language-trans"></language-trans>
     <el-dropdown trigger="click" size="small" class="user-info" @command="handleCommand">
       <span class="el-dropdown-link">
@@ -70,4 +78,13 @@ export default {
 
 <style lang="scss">
 @import './header.scss';
+@import '../../../styles/mixin.scss';
+.github_logo{
+  position: absolute;
+  top: 9px;
+  right: 120px;
+  .github_people{
+    color: gray;
+  }
+}
 </style>

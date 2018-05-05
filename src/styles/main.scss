@@ -18,10 +18,10 @@ body, html{
 
 .router-link-active{
   span{
-    color: rgb(64, 158, 255) !important;
+    color: $baseColor !important;
   }
   .icon{
-    color: rgb(64, 158, 255) !important;
+    color: $baseColor !important;
   }
 }
 .clear::before{

@@ -52,15 +52,6 @@ export const baseRoute = [
         component: () => import('@/views/components-demo/markdown.vue')
       },
       {
-        path: 'json-editor',
-        name: 'json_editor',
-        meta: {
-          title: 'jsonEditor',
-          access: ['admin']
-        },
-        component: () => import('@/views/components-demo/jsonEditor.vue')
-      },
-      {
         path: 'avator-upload',
         name: 'avator_upload',
         meta: {
@@ -203,23 +194,23 @@ export const baseRoute = [
       }
     ]
   },
-  {
-    path: '/test',
-    title: '小工具', // 后期再翻译
-    name: 'test',
-    icon: 'tab',
-    component: Main,
-    children: [
-      {
-        path: 'css',
-        name: 'css_index',
-        meta: {
-          title: 'cssAngle'
-        },
-        component: () => import('@/views/components-demo/cssSet.vue')
-      }
-    ]
-  },
+  // { 暂时注释
+  //   path: '/test',
+  //   title: '小工具', // 后期再翻译
+  //   name: 'test',
+  //   icon: 'tab',
+  //   component: Main,
+  //   children: [
+  //     {
+  //       path: 'css',
+  //       name: 'css_index',
+  //       meta: {
+  //         title: 'cssAngle'
+  //       },
+  //       component: () => import('@/views/components-demo/cssSet.vue')
+  //     }
+  //   ]
+  // },
   {
     path: '/bug',
     name: 'bug',

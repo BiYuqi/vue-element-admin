@@ -1,3 +1,4 @@
+@import "../../../styles/mixin.scss";
 .tag-wrap{
   line-height: 34px;
   height: 34px;
@@ -19,9 +20,9 @@
   }
   .tag-view{
     .current{
-      background-color: #409EFF;
+      background-color: $tagColor;
       color: #fff !important;
-      border-color: #409EFF;
+      border-color: $tagColor;
       padding: 0 12px;
       padding-left: 20px;
       position: relative;

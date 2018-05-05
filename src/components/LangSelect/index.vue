@@ -2,7 +2,7 @@
   <div class="set-language">
     <el-dropdown @command="handleCommand" trigger="click">
       <span class="el-dropdown-link">
-        <svg-icon name="earth" :size="20"/>
+        <svg-icon name="earth" :size="24"/>
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item command="zh" :disabled="language==='zh'">中文</el-dropdown-item>
@@ -28,5 +28,10 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+.el-dropdown-link{
+  .icon-earth{
+    color: gray;
+  }
+}
 </style>
