@@ -1,10 +1,28 @@
 <template>
   <div class="material_input_focus" :class="actionClass">
-    <div class="material_input_focus_line" :class="textClass" :style="{height: height + 'px', 'padding-top': 2 + 'px'}">
-      <svg-icon v-if="iconName" name="search" class="input-icon"></svg-icon>
-      <i class="material_input_text" :class="textClass">{{ text }}</i>
+    <div class="material_input_focus_line"
+        :class="textClass"
+        :style="{height: height + 'px', 'padding-top': 2 + 'px'}">
+      <svg-icon
+        v-if="iconName"
+        name="search"
+        class="input-icon">
+      </svg-icon>
+      <i
+        class="material_input_text"
+        @click="placeholderEvent"
+        :class="textClass">
+        {{ placeholder }}
+      </i>
       <span class="line"></span>
-      <input @input="handleInput" @focus="handleFocus" @blur="handleBulr" :class="isBolder" :style="{height: height - 4 + 'px'}" :placeholder="placeholder">
+      <span class="line-active"></span>
+      <input
+        @input="handleInput"
+        @focus="handleFocus"
+        @blur="handleBulr"
+        :class="isBolder"
+        ref="input"
+        :style="{height: height - 4 + 'px'}">
     </div>
   </div>
 </template>
@@ -14,14 +32,10 @@ export default {
   props: {
     value: [String, Number],
     height: {
-      type: Number,
+      type: [Number, String],
       default: 40
     },
     placeholder: {
-      type: String,
-      default: ''
-    },
-    text: {
       type: String,
       default: '标题'
     },
@@ -82,6 +96,10 @@ export default {
       } else {
         this.isFocus = false
       }
+    },
+    placeholderEvent () {
+      this.isFocus = true
+      this.$refs.input.focus()
     }
   }
 }
@@ -94,6 +112,16 @@ export default {
     position: relative;
     transition: all .2s;
     position: relative;
+    .line-active{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $borderActiveColor;
+      transform: scaleX(0);
+      transition: all .2s;
+    }
     .line{
       position: absolute;
       bottom: 0;
@@ -101,37 +129,10 @@ export default {
       width: 100%;
       height: 1px;
       background-color: $borderColor;
-      &:after{
-        position: absolute;
-        display: block;
-        content: '';
-        bottom: 0;
-        left: 50%;
-        height: 1px;
-        z-index: 1000;
-        transition: .2s ease all;
-      }
-      &:before{
-        position: absolute;
-        display: block;
-        content: '';
-        bottom: 0;
-        right: 50%;
-        height: 1px;
-        z-index: 1000;
-        transition: .2s ease all;
-      }
     }
     &.material_input_text_active{
-      .line{
-        &:after{
-          width: 50%;
-          background-color: rgb(38, 148, 203);
-        }
-        &:before{
-          width: 50%;
-          background-color: rgb(38, 148, 203);
-        }
+      .line-active{
+        transform: scaleX(1);
       }
     }
     &.is-icon{
@@ -148,7 +149,7 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     left: 4px;
-    color: rgb(38, 148, 203);
+    color: $borderActiveColor;
   }
   .material_input_text{
     font-style: normal;
@@ -156,14 +157,15 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     left: 30px;
-    color: #666;
-    font-size: 16px;
+    color: $holdColor;
+    font-size: 14px;
     transition: all .2s;
     &.material_input_text_active{
       top: -4px;
       left: 0;
-      color: rgb(38, 148, 203);
+      color: $borderActiveColor;
       font-weight: bold;
+      font-size: 12px;
     }
   }
   input{

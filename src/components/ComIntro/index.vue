@@ -33,5 +33,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+@import '../../styles/mixin.scss';
+.intro{
+  color: $gray;
+  a{
+    color: $textColor;
+  }
+}
 </style>

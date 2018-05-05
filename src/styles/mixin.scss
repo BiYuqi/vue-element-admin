@@ -43,4 +43,11 @@
   margin-bottom: $z;
 }
 $baseColor: #409EFF; // 全局蓝色主色系
-$borderColor: #dcdfe6;
+$lightBaseColor: #337ab7; // 浅色色系列背景色
+
+$textColor: #337ab7; // 部分文字颜色
+$gray: #808080; // 默认文字颜色
+
+$borderColor: #dcdfe6; // 边框默认色
+$borderActiveColor: #2694cb; // 边框激活色
+$holdColor: #ada9a9; // 占位符颜色

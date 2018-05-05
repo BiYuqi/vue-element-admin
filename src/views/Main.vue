@@ -7,7 +7,7 @@
 
 <script>
 import AppMain from '@/views/layout/AppMain'
-import SideBar from '@/views/layout/SideBar'
+import SideBar from '@/views/layout/SideBar/sidebar'
 export default {
   data () {
     return {

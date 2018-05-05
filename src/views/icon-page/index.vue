@@ -1,8 +1,10 @@
 <template lang="html">
   <div class="svg-icon-demo components-wrap">
-    <div class="link">
-      <a href="https://shimo.im/docs/oEVcPTwvkAI5oWhN/" target="_blank">使用方法</a>
-    </div>
+    <com-intro
+      leftTxt="请点击右边链接进行查看组件使用方法"
+      url="https://shimo.im/docs/oEVcPTwvkAI5oWhN/"
+      urlTxt="使用方法">
+    </com-intro>
     <div class="render-icon">
       <div class="icon-item" v-for="(item, index) in lists" :key="index">
         <el-tooltip class="item" effect="dark" placement="top" @click.native="copy(renderIcon(item))">
@@ -49,22 +51,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../styles/mixin.scss';
 .svg-icon-demo{
-  .link{
-    padding: 10px 20px;
-    // margin: 20px;
-    border-radius: 5px;
-    background-color: rgba(64, 202, 198, .3);
-    margin-bottom: 40px;
-    a{
-      color: rgba(64, 202, 198, 1);
-      text-decoration: none;
-    }
-    a:visited, a:active{
-      color: rgba(64, 202, 198, 1);
-      text-decoration: none;
-    }
-  }
   .icon-item{
     margin: 20px;
     height: 90px;

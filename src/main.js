@@ -10,7 +10,9 @@ import store from './store'
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // 导入全局svg-icon组件
+// 导入介绍组件的组件
 import SvgIcon from '@/components/SvgIcon'
+import ComIntro from '@/components/ComIntro'
 // 导入中英互译组件
 import i18n from './lang'
 // 导入点击波浪组件
@@ -20,6 +22,8 @@ import './errorLog'
 
 // 注册全局svg-icon组件
 Vue.component('svg-icon', SvgIcon)
+// 注册全局介绍组件的组件
+Vue.component('com-intro', ComIntro)
 Vue.config.productionTip = false
 
 // 使用element-ui

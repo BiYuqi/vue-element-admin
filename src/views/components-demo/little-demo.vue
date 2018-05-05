@@ -6,7 +6,12 @@
           <div slot="header" class="clearfix">
             <span>Form Input Tip</span>
           </div>
-          <input-focus v-model="test" iconName="search" style="width:200px;"></input-focus>
+          <input-focus
+            v-model="test"
+            iconName="search"
+            placeholder="标题"
+            style="width:200px;">
+          </input-focus>
         </el-card>
       </el-col>
       <el-col :span="6">

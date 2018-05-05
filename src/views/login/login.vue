@@ -100,7 +100,7 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import '../../styles/login/login.scss';
+  @import './login.scss';
   .role-class{
     width: 100%;
     margin-bottom: 30px;

@@ -24,13 +24,11 @@
 </template>
 
 <script>
-import ComIntro from '@/views/components-intro/index'
 import myUpload from 'vue-image-crop-upload'
 // 官方示例
 // https://github.com/dai-siki/vue-image-crop-upload#%E7%A4%BA%E4%BE%8B
 export default {
   components: {
-    ComIntro,
     myUpload
   },
   data () {

@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import HeaderOn from '@/views/layout/Header'
-import TagView from '@/views/layout/TagView'
+import HeaderOn from '@/views/layout/Header/header'
+import TagView from '@/views/layout/TagView/tagview'
 export default {
   components: {
     HeaderOn,

@@ -22,8 +22,8 @@
     </sticky-pan>
     <div class="sticky-page components-wrap">
       <com-intro
-        leftTxt="Sticky 当页面滚动到预设的位置会吸附在顶部，内容自定义"
-        ></com-intro>
+        leftTxt="Sticky 当页面滚动到预设的位置会吸附在顶部，内容自定义">
+      </com-intro>
       <div class="test">
         <p v-for="item in 20" :key="item">placeholder{{item}}</p>
       </div>
@@ -33,11 +33,9 @@
 
 <script>
 import StickyPan from '@/components/Sticky'
-import ComIntro from '@/views/components-intro/index'
 export default {
   components: {
-    StickyPan,
-    ComIntro
+    StickyPan
   },
   data () {
     return {

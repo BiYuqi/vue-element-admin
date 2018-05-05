@@ -92,7 +92,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/layout/sidebar.scss';
+@import './sidebar.scss';
 .svg-icon{
   width: 36px;
   height: 36px;
