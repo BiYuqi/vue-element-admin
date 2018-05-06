@@ -1,7 +1,6 @@
 .wave-wrap{
   position: absolute;
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
   background-clip: padding-box;
   pointer-events: none;
   -webkit-user-select: none;
@@ -18,8 +17,6 @@
   -webkit-transform: scale(2);
   -ms-transform: scale(2);
   transform: scale(2);
-  -webkit-transition: opacity 1.2s ease-out,
-  -webkit-transform 0.6s ease-out;
-  transition: opacity 1.2s ease-out,
-  transform 0.6s ease-out;
+  -webkit-transition: opacity 1.2s ease-out, -webkit-transform 0.6s ease-out;
+  transition: opacity 1.2s ease-out, transform 0.6s ease-out;
 }

@@ -67,15 +67,9 @@ export default {
       * 本demo只是简单的展示
       * 后续会逐步完善
       */
-      let themeLink = document.querySelector('link[name="theme"]')
-      let pathName = ''
-      let lastName = ''
-      if (process.env.NODE_ENV === 'development') {
-        pathName = './static/theme/'
-      } else {
-        pathName = 'dist/static/theme/'
-      }
-      lastName = pathName + com + '.css'
+      const themeLink = document.querySelector('link[name="theme"]')
+      const pathName = '/static/theme/'
+      const lastName = pathName + com + '.css'
       themeLink.setAttribute('href', lastName)
     }
   },

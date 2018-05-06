@@ -20,7 +20,7 @@ BtnWave.install = (Vue, options) => {
         } else {
           waveCircle.className = 'wave-wrap'
         }
-        if (baseConfig && baseConfig.type && baseConfig.type === 'center') {
+        if (baseConfig.type === 'center') {
           waveCircle.style.top = (rect.height / 2 - waveCircle.offsetHeight / 2) + 'px'
           waveCircle.style.left = (rect.width / 2 - waveCircle.offsetWidth / 2) + 'px'
         } else {
