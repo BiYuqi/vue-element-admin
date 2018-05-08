@@ -90,6 +90,14 @@ export const baseRoute = [
           title: 'codeEdit'
         },
         component: () => import('@/views/components-demo/codeEdit.vue')
+      },
+      {
+        path: 'arrow-select',
+        name: 'arrow-select',
+        meta: {
+          title: 'arrowSelect'
+        },
+        component: () => import('@/views/components-demo/arrowSelect.vue')
       }
     ]
   },

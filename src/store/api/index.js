@@ -7,7 +7,7 @@ const state = {
     param: {},
     status: 200,
     callback: () => {},
-    error: (res) => {}
+    error: () => {}
   },
   server: {
     server1: 'https://easy-mock.com/mock/5aa881eb99ed355f274d0e93'

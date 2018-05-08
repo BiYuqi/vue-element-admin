@@ -36,26 +36,6 @@
         </el-col>
       </el-row>
     </el-card>
-    <el-card class="box-card">
-      <div slot="header" class="clearfix">
-        <span>测试用箭头选值(支持enter键)</span>
-      </div>
-      <el-row>
-        <el-col>
-          <div class="arrow-wrap">
-            <el-input
-              v-model="arrow"
-              @input="renderData"
-              placeholder="请随意输入问题"
-              @keyup.native="listenKeyCode">
-            </el-input>
-            <ul>
-              <li class="key-list" v-for="item in arrowData" :key="item.id">{{item.title}}</li>
-            </ul>
-          </div>
-        </el-col>
-      </el-row>
-    </el-card>
   </div>
 </template>
 
@@ -73,10 +53,7 @@ export default {
           title: '蓝色',
           key: 'blue'
         }
-      ],
-      arrow: '',
-      arrowData: [],
-      initIndex: 0
+      ]
     }
   },
   methods: {
@@ -94,64 +71,6 @@ export default {
       const pathName = '/static/theme/'
       const lastName = pathName + com + '.css'
       themeLink.setAttribute('href', lastName)
-    },
-    renderData () {
-      if (this.arrowData.length > 0) return
-      for (let i = 0; i < 5; i++) {
-        const data = {
-          title: `我是测试${i}号`,
-          key: `${i}`
-        }
-        this.arrowData.push(data)
-      }
-      // 初始化设置
-      this.$nextTick(() => {
-        const searchList = Array.from(document.querySelectorAll('.key-list'))
-        searchList[this.initIndex].className += ' active'
-      })
-    },
-    removeClassName (searchList) {
-      const reg = /active/
-      for (let i = 0; i < searchList.length; i++) {
-        const cm = searchList[i].className
-        if (reg.test(cm)) {
-          searchList[i].className = 'key-list'
-        }
-      }
-    },
-    listenKeyCode (event) {
-      // console.log(event)
-      const keyCode = event.keyCode
-      const up = 38
-      const down = 40
-      const submit = 13
-      const searchList = Array.from(document.querySelectorAll('.key-list'))
-      const len = searchList.length
-      if (keyCode === up) {
-        this.removeClassName(searchList)
-        this.initIndex--
-        if (this.initIndex < 0) {
-          this.initIndex = len - 1
-        }
-        searchList[this.initIndex].className += ' active'
-      } else if (keyCode === down) {
-        this.removeClassName(searchList)
-        this.initIndex++
-        if (this.initIndex > len - 1) {
-          this.initIndex = 0
-        }
-        searchList[this.initIndex].className += ' active'
-      }
-      // 提交数据 初始化输入框
-      if (keyCode === submit) {
-        for (let i = 0; i < len; i++) {
-          if (searchList[i].className.indexOf('active') > -1) {
-            this.arrow = searchList[i].innerHTML
-            this.initIndex = 0
-            this.arrowData.splice(0)
-          }
-        }
-      }
     }
   }
 }
@@ -165,28 +84,6 @@ export default {
   }
   .grid-content{
     min-height: 40px;
-  }
-  .arrow-wrap{
-    position: relative;
-    ul{
-      list-style: none;
-    }
-    li{
-      height: 40px;
-      line-height: 40px;
-      cursor: pointer;
-      padding-left: 10px;
-      border-bottom: 1px solid $borderColor;
-      transition: all .2s;
-      &:hover{
-        background-color: #eee;
-        color: $baseColor;
-      }
-      &.active{
-        background-color: $baseColor;
-        color: #fff;
-      }
-    }
   }
 }
 

@@ -7,10 +7,10 @@ export const ajaxMethod = ({state, dispatch}, data) => {
   let url = data.param[1]
   let param = data.param[2]
   let payload = data.param[3]
-  let error = res => {
-    state.error = res
-  }
-  payload.error = error
+  // let error = res => {
+  //   state.error = res
+  // }
+  // payload.error = error
   const request = new AjaxRequest(url, param, payload)
   if (method === 'GET') {
     request.getAjaxMethod(url, param, payload)
@@ -31,4 +31,9 @@ export const ajaxMethod = ({state, dispatch}, data) => {
 */
 export const getUserInfo = ({state, dispatch}, payload) => {
   dispatch('api/ajaxMethod', {param: ['GET', state.server.server1 + '/system/userInfo?role=' + payload.param.role, payload.param, payload]}, {root: true})
+}
+
+// 获取模拟查询列表 》 箭头选值.vue
+export const getArrowSelect = ({state, dispatch}, payload) => {
+  dispatch('api/ajaxMethod', {param: ['GET', state.server.server1 + '/system/getSearchList#!method=get', payload]}, {root: true})
 }

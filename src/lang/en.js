@@ -24,6 +24,7 @@ export default {
     composite: 'Composite',
     table: 'Table',
     tab: 'Tab',
-    codeEdit: 'Code Editor'
+    codeEdit: 'Code Editor',
+    arrowSelect: 'Arrow Select'
   }
 }

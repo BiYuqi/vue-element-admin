@@ -24,6 +24,7 @@ export default {
     composite: '综合实例',
     table: '表格',
     tab: 'Tab',
-    codeEdit: '代码编辑器'
+    codeEdit: '代码编辑器',
+    arrowSelect: '箭头选值'
   }
 }

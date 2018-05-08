@@ -3,7 +3,7 @@ import mutations from './mutations'
 import * as actions from './actions'
 
 const state = {
-  role: []
+  role: []// 存储角色信息
 }
 
 export default {
