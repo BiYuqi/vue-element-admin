@@ -38,7 +38,7 @@ router.beforeEach((to, from, next) => {
     if ((Cookie.get('user')) && store.getters['user/role'].length === 0) { // 已经登录且角色已经分配
       /** 正式用注释这段就够了，因为后台回返给不同的角色 */
       const localRole = Cookie.get('role')
-      store.dispatch('user/getUserInfoAction', {role: localRole}).then((role) => { // 服务端拉去用户role
+      store.dispatch('user/GetUserInfoAction', {role: localRole}).then((role) => { // 服务端拉去用户role
         store.commit('user/USER_INFO', role) // vuex管理role
         store.dispatch('permiss/setFilterRoutes', role.data.data.role[0]).then((res) => { // 根据role过滤路由
           store.dispatch('permiss/setRoutes', res) // vuex管理路由

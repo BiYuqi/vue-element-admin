@@ -14,7 +14,7 @@ const mutations = {
   }
 }
 const actions = {
-  setFilterRoutes ({state, commit, dispatch, getters, rootGetters}, data) {
+  setFilterRoutes ({state}, data) {
     return new Promise((resolve, reject) => {
       const role = data
       const result = filterRoutesByRole(baseRoute, role)

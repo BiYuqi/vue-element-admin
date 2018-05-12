@@ -1,4 +1,5 @@
 import * as types from './types.js'
+import {fetchUserInfo, fetchArrowSelect} from '@/api/userInfo'
 
 const state = {
   role: []// 存储角色信息
@@ -12,27 +13,22 @@ const mutations = {
   }
 }
 const actions = {
-  getUserInfoAction ({state, commit, dispatch, getters, rootGetters}, data) {
-    const payload = rootGetters['api/payload']
-    payload.param = data
+  GetUserInfoAction ({state}, data) {
     return new Promise((resolve, reject) => {
-      payload.callback = res => {
+      fetchUserInfo(data).then(res => {
         resolve(res)
-      }
-      payload.error = res => {
-        reject(res)
-      }
-      dispatch('api/getUserInfo', payload, {root: true})
+      }).catch(err => {
+        reject(err)
+      })
     })
   },
-  getUserInfoAction2 ({state, commit, dispatch, getters, rootGetters}, data) {
-    const payload = rootGetters['api/payload']
-    payload.param = data
+  GetArrowSelect ({state}, data) { // 暂未用到
     return new Promise((resolve, reject) => {
-      payload.callback = res => {
+      fetchArrowSelect(data).then(res => {
         resolve(res)
-      }
-      dispatch('api/getArrowSelect', payload, {root: true})
+      }).catch(err => {
+        reject(err)
+      })
     })
   }
 }
