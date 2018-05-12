@@ -21,7 +21,7 @@
 
 ![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-31%2011.52.51.png)
 
-![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-01%2020.32.17.png)
+![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-5-12.png)
 
 ![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-01%2020.32.49.png)
 
