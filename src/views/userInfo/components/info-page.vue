@@ -1,14 +1,14 @@
 <template lang="html">
   <div class="edit-info components-wrap">
       <info-temp title="修改密码">
-        <el-form ref="changeUserInfo" label-width="100px" :rules="rules" :model="userInfo" size="small">
-          <el-form-item class="form-item" label="原始密码" prop="password">
+        <el-form ref="changeUserInfo" label-width="70px" :rules="rules" :model="userInfo" size="small">
+          <el-form-item class="form-item" label="原密码" prop="password">
             <el-input type="password" v-model="userInfo.password" placeholder="请输入原始密码"></el-input>
           </el-form-item>
-          <el-form-item class="form-item" label="❤️密码" prop="newPass">
+          <el-form-item class="form-item" label="新密码" prop="newPass">
             <el-input type="password" v-model="userInfo.newPass" placeholder="请输入新密码"></el-input>
           </el-form-item>
-          <el-form-item class="form-item" label="确认新密码" prop="newPassAgain">
+          <el-form-item class="form-item" label="确认密码" prop="newPassAgain">
             <el-input type="password" v-model="userInfo.newPassAgain" placeholder="请再次输入新密码"></el-input>
           </el-form-item>
           <el-form-item>

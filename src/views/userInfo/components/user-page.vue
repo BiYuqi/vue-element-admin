@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="edit-info components-wrap">
       <info-temp title="修改用户信息" name="user">
-        <el-form ref="changeUserInfo" label-width="100px" :rules="rules" :model="userInfo" size="small">
+        <el-form ref="changeUserInfo" label-width="60px" :rules="rules" :model="userInfo" size="small">
           <el-form-item class="form-item" label="姓名">
             <el-input type="text" v-model="userInfo.userName" disabled></el-input>
           </el-form-item>

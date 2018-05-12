@@ -26,7 +26,7 @@ export default {
 <style lang="scss">
 @import '../../../styles/main.scss';
 .temp-info{
-  padding: 20px 15px;
+  padding: 10px 15px 20px;
   border: 1px solid $borderColor;
   .title{
     padding: 5px;
