@@ -1,5 +1,7 @@
 <template lang="html">
-  <div class="editor-form components-wrap">editor-form</div>
+  <div class="editor-form components-wrap">
+    <coding-tip></coding-tip>
+  </div>
 </template>
 
 <script>

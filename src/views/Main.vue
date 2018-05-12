@@ -8,6 +8,7 @@
 <script>
 import AppMain from '@/views/layout/AppMain'
 import SideBar from '@/views/layout/SideBar/sidebar'
+import Cookie from 'js-cookie'
 export default {
   data () {
     return {
@@ -21,6 +22,7 @@ export default {
   },
   created () {
     this.$store.commit('setOpenedList')
+    this.$store.commit('setCurrentUserInfo', Cookie.get('user'))
   },
   watch: {
     '$route' (to, from) {

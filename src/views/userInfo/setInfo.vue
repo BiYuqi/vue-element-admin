@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="table-wrap components-wrap">
+  <div class="set-info components-wrap">
     <coding-tip></coding-tip>
   </div>
 </template>
@@ -9,5 +9,5 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
 </style>

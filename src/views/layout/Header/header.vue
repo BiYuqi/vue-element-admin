@@ -7,13 +7,10 @@
       :class="{collapse: collapse}"
       @click.native="changeTab">
     </svg-icon>
-    <a class="github_logo" href="https://github.com/BiYuqi/vue-element-admin" target="_blank">
-      <svg-icon class="github_people" :size="24" name="github"/>
-    </a>
     <language-trans class="language-trans"></language-trans>
     <el-dropdown trigger="click" size="small" class="user-info" @command="handleCommand">
       <span class="el-dropdown-link">
-        <svg-icon name="boy" class="avatar"></svg-icon>
+        <svg-icon name="boy" :size="14" class="avatar"></svg-icon>
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
@@ -79,12 +76,4 @@ export default {
 <style lang="scss">
 @import './header.scss';
 @import '../../../styles/mixin.scss';
-.github_logo{
-  position: absolute;
-  top: 9px;
-  right: 120px;
-  .github_people{
-    color: gray;
-  }
-}
 </style>

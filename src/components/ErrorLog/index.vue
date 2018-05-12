@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="bugger">
+    <el-button @click="testBug">测试BUG</el-button>
     <el-table :data="errorLog" border>
       <el-table-column label="Message">
         <template slot-scope="scope">
@@ -35,6 +36,11 @@ export default {
   },
   mounted () {
     console.log(this.errorLog)
+  },
+  methods: {
+    testBug () {
+      console.log(a)
+    }
   },
   computed: {
     errorLog () {

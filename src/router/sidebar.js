@@ -162,7 +162,7 @@ export const baseRoute = [
   {
     path: '/composite', // 综合实例
     name: 'composite',
-    icon: 'example',
+    icon: 'complex',
     title: 'composite',
     component: Main,
     children: [
@@ -181,6 +181,33 @@ export const baseRoute = [
           title: 'tab'
         },
         component: () => import('@/views/composite-demo/tab/index.vue')
+      }
+    ]
+  },
+  {
+    path: '/userinfo',
+    name: 'user',
+    icon: 'user',
+    component: Main,
+    title: 'manageInfo',
+    children: [
+      {
+        path: 'userinfo',
+        name: 'user_info',
+        meta: {
+          title: 'userInfo',
+          access: ['admin']
+        },
+        component: () => import('@/views/userInfo/setInfo.vue')
+      },
+      {
+        path: 'editinfo',
+        name: 'edit_info',
+        meta: {
+          title: 'editInfo',
+          access: ['admin']
+        },
+        component: () => import('@/views/userInfo/editInfo.vue')
       }
     ]
   },

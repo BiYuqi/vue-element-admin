@@ -41,8 +41,16 @@ const lineChartData = {
     actualData: [120, 90, 100, 138, 142, 130, 130]
   },
   shoppings: {
+    expectedData: [130, 190, 141, 142, 145, 150, 160],
+    actualData: [140, 92, 91, 114, 162, 90, 130]
+  },
+  report: {
     expectedData: [130, 140, 141, 142, 145, 150, 160],
-    actualData: [120, 82, 91, 154, 162, 140, 130]
+    actualData: [180, 160, 151, 106, 145, 150, 130]
+  },
+  github: {
+    expectedData: [110, 140, 141, 102, 145, 150, 160],
+    actualData: [120, 82, 91, 104, 162, 140, 130]
   }
 }
 export default {

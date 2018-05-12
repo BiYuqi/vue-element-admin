@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/demo-styles/cards.scss';
+@import './cards.scss';
 .cards{
   height: 108px;
   cursor: pointer;

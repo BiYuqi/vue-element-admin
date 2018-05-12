@@ -1,5 +1,7 @@
 <template lang="html">
-  <div class="tab-wrap compoents-wrap">Tab</div>
+  <div class="tab-wrap compoents-wrap">
+    <coding-tip></coding-tip>
+  </div>
 </template>
 
 <script>

@@ -13,6 +13,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 // 导入介绍组件的组件
 import SvgIcon from '@/components/SvgIcon'
 import ComIntro from '@/components/ComIntro'
+import CodingTip from '@/components/CodingTip'
 // 导入中英互译组件
 import i18n from './lang'
 // 导入点击波浪组件
@@ -24,6 +25,8 @@ import './errorLog'
 Vue.component('svg-icon', SvgIcon)
 // 注册全局介绍组件的组件
 Vue.component('com-intro', ComIntro)
+// 待开发组件提示
+Vue.component('coding-tip', CodingTip)
 Vue.config.productionTip = false
 
 // 使用element-ui

@@ -33,6 +33,9 @@ export const mutations = {
   setCurrentPageName (state, res) {
     state.currentPageName = res
   },
+  setCurrentUserInfo (state, res) {
+    state.currentUserInfo = res
+  },
   setSidebar (state) { // 侧边栏开关
     // if (!localStorage.getItem('sidebarStatus')) {
     //   localStorage.setItem('sidebarStatus', '0')

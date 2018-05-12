@@ -1,5 +1,7 @@
 <template lang="html">
-  <div class="router-two components-wrap"></div>
+  <div class="router-two components-wrap">
+    <coding-tip></coding-tip>
+  </div>
 </template>
 
 <script>

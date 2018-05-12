@@ -1,5 +1,4 @@
 .dashboard{
-  height: 100%;
   background-size: cover;
   padding: 32px;
   background-color: #f0f2f5;
@@ -69,6 +68,30 @@
     &:hover{
       background-color: #34bfa3;
       .icon-shoppingCard{
+        color: #fff;
+      }
+    }
+  }
+  .panel-report{
+    .icon-report{
+      color: #f90;
+      transition: all 0.38s ease-out;
+    }
+    &:hover{
+      background-color: #f90;
+      .icon-report{
+        color: #fff;
+      }
+    }
+  }
+  .panel-github{
+    .icon-github{
+      color: #09c;
+      transition: all 0.38s ease-out;
+    }
+    &:hover{
+      background-color: #09c;
+      .icon-github{
         color: #fff;
       }
     }

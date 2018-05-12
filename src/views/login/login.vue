@@ -82,6 +82,7 @@ export default {
         if (valid) {
           Cookie.set('user', this.formItem.account)
           Cookie.set('role', this.userRole) // 用于拉去用户可支配的路由权限
+          this.$store.commit('setCurrentUserInfo', this.formItem.account) // manage user info
           this.$router.push({
             path: 'dashboard'
           })

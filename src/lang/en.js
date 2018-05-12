@@ -25,6 +25,9 @@ export default {
     table: 'Table',
     tab: 'Tab',
     codeEdit: 'Code Editor',
-    arrowSelect: 'Arrow Select'
+    arrowSelect: 'Arrow Select',
+    userInfo: 'User Info',
+    editInfo: 'Edit Info',
+    manageInfo: 'Manage Info'
   }
 }

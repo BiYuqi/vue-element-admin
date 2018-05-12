@@ -3,3 +3,9 @@
   color: #fff !important;
   border-color: #409eff;
 }
+#app .router-link-active span{
+  color: #409eff !important;
+}
+#app .router-link-active .icon{
+  color: #409eff !important;
+}
