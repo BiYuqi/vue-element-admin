@@ -68,7 +68,7 @@ export default {
       * 后续会逐步完善
       */
       const themeLink = document.querySelector('link[name="theme"]')
-      const pathName = '/static/theme/'
+      const pathName = './static/theme/'
       const lastName = pathName + com + '.css'
       themeLink.setAttribute('href', lastName)
     }
