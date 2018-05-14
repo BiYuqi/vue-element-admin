@@ -25,6 +25,7 @@
 
 <script>
 import InfoTemp from './index.vue'
+import {phoneCheck, emailCheck} from '@/utils/validate'
 export default {
   components: {
     InfoTemp
@@ -40,7 +41,7 @@ export default {
     const checkNewPass = (rule, value, callback) => {
       if (!value) {
         return callback(new Error('邮箱不能为空'))
-      } else if (!/^\w+@\w+\.\w+$/.test(value)) {
+      } else if (!emailCheck(value)) {
         return callback(new Error('邮箱错误'))
       } else {
         callback()
@@ -49,7 +50,7 @@ export default {
     const checkNewPassAgain = (rule, value, callback) => {
       if (!value) {
         return callback(new Error('手机号码不能为空'))
-      } else if (!/^1[3578]\d{9}$/.test(value)) {
+      } else if (!phoneCheck(value)) {
         return callback(new Error('手机号码有误!'))
       } else {
         callback()

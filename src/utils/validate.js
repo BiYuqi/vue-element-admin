@@ -12,3 +12,18 @@ export const passCheck = (val) => {
   }
   return false
 }
+/**
+* check email
+*/
+export const emailCheck = (val) => {
+  const reg = /^\w+@\w+\.\w+$/
+  return reg.test(val)
+}
+
+/**
+* check phone
+*/
+export const phoneCheck = (val) => {
+  const reg = /^1[3578]\d{9}$/
+  return reg.test(val)
+}
