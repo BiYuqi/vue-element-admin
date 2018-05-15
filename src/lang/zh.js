@@ -28,6 +28,7 @@ export default {
     arrowSelect: '箭头选值',
     userInfo: '用户信息',
     editInfo: '修改信息',
-    manageInfo: '信息管理'
+    manageInfo: '信息管理',
+    richEditor: '富文本编辑器'
   }
 }

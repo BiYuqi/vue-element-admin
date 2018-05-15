@@ -28,6 +28,7 @@ export default {
     arrowSelect: 'Arrow Select',
     userInfo: 'User Info',
     editInfo: 'Edit Info',
-    manageInfo: 'Manage Info'
+    manageInfo: 'Manage Info',
+    richEditor: 'RichEditor'
   }
 }

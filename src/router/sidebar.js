@@ -98,6 +98,14 @@ export const baseRoute = [
           title: 'arrowSelect'
         },
         component: () => import('@/views/components-demo/arrowSelect.vue')
+      },
+      {
+        path: 'rich-editor',
+        name: 'rich-editor',
+        meta: {
+          title: 'richEditor'
+        },
+        component: () => import('@/views/components-demo/richEditor.vue')
       }
     ]
   },
