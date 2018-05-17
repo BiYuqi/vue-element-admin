@@ -12,7 +12,7 @@ export default [
         meta: {
           title: 'orderDetail'
         },
-        component: () => import('@/views/router-page/order.vue')
+        component: () => import('@/views/RouterPage/order.vue')
       }
     ]
   },
@@ -27,7 +27,7 @@ export default [
         meta: {
           title: 'shopingDetail'
         },
-        component: () => import('@/views/router-page/shop.vue')
+        component: () => import('@/views/RouterPage/shop.vue')
       }
     ]
   }

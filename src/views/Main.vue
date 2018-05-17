@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import AppMain from '@/views/layout/AppMain'
-import SideBar from '@/views/layout/SideBar/sidebar'
+import AppMain from '@/views/Layout/AppMain'
+import SideBar from '@/views/Layout/SideBar/sidebar'
 import Cookie from 'js-cookie'
 export default {
   data () {

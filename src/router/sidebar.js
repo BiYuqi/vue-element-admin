@@ -14,7 +14,7 @@ export const baseRoute = [
         meta: {
           title: 'dashboard'
         },
-        component: () => import('@/views/dashboard/dashboard.vue')
+        component: () => import('@/views/Dashboard/dashboard.vue')
       }
     ]
   },
@@ -31,7 +31,7 @@ export const baseRoute = [
         meta: {
           title: 'icons'
         },
-        component: () => import('@/views/icon-page/index.vue')
+        component: () => import('@/views/IconPage/index.vue')
       }
     ]
   },
@@ -49,7 +49,7 @@ export const baseRoute = [
           title: 'markdown',
           access: ['admin']
         },
-        component: () => import('@/views/components-demo/markdown.vue')
+        component: () => import('@/views/ComponentsDemo/markdown.vue')
       },
       {
         path: 'avator-upload',
@@ -57,7 +57,7 @@ export const baseRoute = [
         meta: {
           title: 'avatarUpload'
         },
-        component: () => import('@/views/components-demo/avatorUpload.vue')
+        component: () => import('@/views/ComponentsDemo/avatorUpload.vue')
       },
       {
         path: 'sticky',
@@ -65,7 +65,7 @@ export const baseRoute = [
         meta: {
           title: 'sticky'
         },
-        component: () => import('@/views/components-demo/sticky-demo.vue')
+        component: () => import('@/views/ComponentsDemo/sticky-demo.vue')
       },
       {
         path: 'little',
@@ -73,7 +73,7 @@ export const baseRoute = [
         meta: {
           title: 'componentMixin'
         },
-        component: () => import('@/views/components-demo/little-demo.vue')
+        component: () => import('@/views/ComponentsDemo/little-demo.vue')
       },
       {
         path: 'back-to-top',
@@ -81,7 +81,7 @@ export const baseRoute = [
         meta: {
           title: 'backToTop'
         },
-        component: () => import('@/views/components-demo/backToTop.vue')
+        component: () => import('@/views/ComponentsDemo/backToTop.vue')
       },
       {
         path: 'code-edit',
@@ -89,7 +89,7 @@ export const baseRoute = [
         meta: {
           title: 'codeEdit'
         },
-        component: () => import('@/views/components-demo/codeEdit.vue')
+        component: () => import('@/views/ComponentsDemo/codeEdit.vue')
       },
       {
         path: 'arrow-select',
@@ -97,7 +97,7 @@ export const baseRoute = [
         meta: {
           title: 'arrowSelect'
         },
-        component: () => import('@/views/components-demo/arrowSelect.vue')
+        component: () => import('@/views/ComponentsDemo/arrowSelect.vue')
       },
       {
         path: 'rich-editor',
@@ -105,7 +105,7 @@ export const baseRoute = [
         meta: {
           title: 'richEditor'
         },
-        component: () => import('@/views/components-demo/richEditor.vue')
+        component: () => import('@/views/ComponentsDemo/richEditor.vue')
       }
     ]
   },
@@ -122,7 +122,7 @@ export const baseRoute = [
         meta: {
           title: 'createForm'
         },
-        component: () => import('@/views/form-page/createForm.vue')
+        component: () => import('@/views/FormPage/createForm.vue')
       },
       {
         path: 'form-editor',
@@ -130,7 +130,7 @@ export const baseRoute = [
         meta: {
           title: 'editForm'
         },
-        component: () => import('@/views/form-page/editForm.vue')
+        component: () => import('@/views/FormPage/editForm.vue')
       },
       {
         path: 'form-update',
@@ -138,7 +138,7 @@ export const baseRoute = [
         meta: {
           title: 'listenForm'
         },
-        component: () => import('@/views/form-page/formUpdate.vue')
+        component: () => import('@/views/FormPage/formUpdate.vue')
       }
     ]
   },
@@ -155,7 +155,7 @@ export const baseRoute = [
         meta: {
           title: 'dynamicRoute'
         },
-        component: () => import('@/views/router-page/index-one.vue')
+        component: () => import('@/views/RouterPage/index-one.vue')
       },
       {
         path: 'send',
@@ -163,7 +163,7 @@ export const baseRoute = [
         meta: {
           title: 'paramRoute'
         },
-        component: () => import('@/views/router-page/index-two.vue')
+        component: () => import('@/views/RouterPage/index-two.vue')
       }
     ]
   },
@@ -180,7 +180,7 @@ export const baseRoute = [
         meta: {
           title: 'table'
         },
-        component: () => import('@/views/composite-demo/table/index.vue')
+        component: () => import('@/views/CompositeDemo/table/index.vue')
       },
       {
         path: 'tab',
@@ -188,7 +188,7 @@ export const baseRoute = [
         meta: {
           title: 'tab'
         },
-        component: () => import('@/views/composite-demo/tab/index.vue')
+        component: () => import('@/views/CompositeDemo/tab/index.vue')
       }
     ]
   },
@@ -206,7 +206,7 @@ export const baseRoute = [
           title: 'userInfo',
           access: ['admin']
         },
-        component: () => import('@/views/userInfo/setInfo.vue')
+        component: () => import('@/views/UserInfo/setInfo.vue')
       },
       {
         path: 'editinfo',
@@ -215,7 +215,7 @@ export const baseRoute = [
           title: 'editInfo',
           access: ['admin']
         },
-        component: () => import('@/views/userInfo/editInfo.vue')
+        component: () => import('@/views/UserInfo/editInfo.vue')
       }
     ]
   },
@@ -233,7 +233,7 @@ export const baseRoute = [
           title: 'setting',
           access: ['admin']
         },
-        component: () => import('@/views/components-demo/setting.vue')
+        component: () => import('@/views/ComponentsDemo/setting.vue')
       }
     ]
   },
@@ -250,7 +250,7 @@ export const baseRoute = [
   //       meta: {
   //         title: 'cssAngle'
   //       },
-  //       component: () => import('@/views/components-demo/cssSet.vue')
+  //       component: () => import('@/views/ComponentsDemo/cssSet.vue')
   //     }
   //   ]
   // },
@@ -268,7 +268,7 @@ export const baseRoute = [
           title: 'errorBug',
           access: ['admin']
         },
-        component: () => import('@/views/components-demo/bugPage.vue')
+        component: () => import('@/views/ComponentsDemo/bugPage.vue')
       }
     ]
   }
