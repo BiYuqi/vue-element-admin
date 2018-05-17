@@ -5,6 +5,15 @@
       url="https://shimo.im/docs/oEVcPTwvkAI5oWhN/"
       urlTxt="使用方法">
     </com-intro>
+    <el-row>
+      <el-col>
+        <el-input
+          v-model="searchIcon"
+          placeholder="请输入关键字查询..."
+          @input.native="searchIconAction">
+        </el-input>
+      </el-col>
+    </el-row>
     <div class="render-icon">
       <div class="icon-item" v-for="(item, index) in lists" :key="index">
         <el-tooltip class="item" effect="dark" placement="top" @click.native="copy(renderIcon(item))">
@@ -28,7 +37,8 @@ export default {
   data () {
     return {
       lists: iconName,
-      copyText: ''
+      copyText: '',
+      searchIcon: ''
     }
   },
   methods: {
@@ -45,6 +55,11 @@ export default {
           type: 'success'
         })
       }, 0)
+    },
+    searchIconAction () {
+      this.lists = iconName.filter((item) => {
+        return item.indexOf(this.searchIcon) > -1
+      })
     }
   }
 }
