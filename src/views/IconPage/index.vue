@@ -58,7 +58,7 @@ export default {
     },
     searchIconAction () {
       this.lists = iconName.filter((item) => {
-        return item.indexOf(this.searchIcon) > -1
+        return item.toLowerCase().indexOf(this.searchIcon.toLowerCase()) > -1
       })
     }
   }
