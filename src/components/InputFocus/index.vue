@@ -20,6 +20,7 @@
         @input="handleInput"
         @focus="handleFocus"
         @blur="handleBulr"
+        :value="currentValue"
         :class="isBolder"
         ref="input"
         :style="{height: height - 4 + 'px'}">

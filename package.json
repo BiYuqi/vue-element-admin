@@ -1,5 +1,5 @@
 {
-  "name": "vue-system",
+  "name": "Vue-element-admin",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "biyuqi <biyuqiwan@163.com>",
@@ -12,7 +12,8 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build",
+    "docs": "docsify serve docs"
   },
   "dependencies": {
     "axios": "^0.17.1",
