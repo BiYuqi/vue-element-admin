@@ -8,7 +8,7 @@
 <script>
 import echarts from 'echarts'
 import {dispose, listenSideBar} from '@/myMixins/charts'
-import CardTitle from '@/components/Charts/CardTitle'
+import CardTitle from '@/components/CardTitle'
 export default {
   mixins: [dispose, listenSideBar],
   props: {

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import CardTitle from '@/components/Charts/CardTitle'
+import CardTitle from '@/components/CardTitle'
 export default {
   components: {
     CardTitle
