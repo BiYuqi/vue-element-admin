@@ -5,16 +5,33 @@
   background-color: #fff;
   border-bottom: 1px solid #eee;
   position: relative;
+  .svg-group{
+    position: absolute;
+    top: 0;
+    right: 100px;
+    height: 50px;
+    padding-top: 10px;
+    .language-trans{
+      display: inline-block;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: all .2;
+      &:hover{
+        .icon{
+          color: rgb(11, 214, 221);
+        }
+      }
+      &:hover{
+        &.icon{
+          color: rgb(11, 214, 221);
+        }
+      }
+    }
+  }
   .user-info{
     position: absolute;
     top: 10px;
     right: 15px;
-    z-index: 888;
-  }
-  .language-trans{
-    position: absolute;
-    top: 10px;
-    right: 85px;
     z-index: 888;
   }
   .el-dropdown-link{
@@ -33,6 +50,11 @@
     color: rgba(0, 0, 0, 0.55);
     &.collapse{
       transform: rotate(90deg);
+    }
+  }
+  .capture{
+    .el-dialog__header{
+      padding: 0;
     }
   }
 }

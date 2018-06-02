@@ -18,6 +18,7 @@ import CodingTip from '@/components/CodingTip'
 import i18n from './lang'
 // 导入点击波浪组件
 import Wave from '@/directive/wave/index'
+import Exclude from '@/directive/exclude/index'
 // 导入global error component
 import './errorLog'
 
@@ -33,6 +34,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUi)
 // 使用v-wave 波浪效果
 Vue.use(Wave)
+Vue.use(Exclude)
 
 // add baidu count
 if (process.env.NODE_ENV === 'production') {
