@@ -16,7 +16,7 @@
     </el-row>
     <div class="render-icon">
       <div class="icon-item" v-for="(item, index) in lists" :key="index">
-        <el-tooltip class="item" effect="dark" placement="top" @click.native="copy(renderIcon(item))">
+        <el-tooltip v-clipboard="renderIcon(item)" class="item" effect="dark" placement="top">
           <div slot="content">
             {{renderIcon(item)}}
           </div>
@@ -27,7 +27,6 @@
         </el-tooltip>
       </div>
     </div>
-    <input class="copy-box" ref="clipboard" type="text" v-model="copyText">
   </div>
 </template>
 
@@ -37,24 +36,12 @@ export default {
   data () {
     return {
       lists: iconName,
-      copyText: '',
       searchIcon: ''
     }
   },
   methods: {
     renderIcon (name) {
       return `<svg-icon name="${name}"/>`
-    },
-    copy (item) {
-      this.copyText = item
-      setTimeout(() => {
-        this.$refs.clipboard.select()
-        document.execCommand('Copy')
-        this.$message({
-          message: '复制成功啦, 赶快使用吧',
-          type: 'success'
-        })
-      }, 0)
     },
     searchIconAction () {
       this.lists = iconName.filter((item) => {

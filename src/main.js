@@ -19,6 +19,7 @@ import i18n from './lang'
 // 导入点击波浪组件
 import Wave from '@/directive/wave/index'
 import Exclude from '@/directive/exclude/index'
+import Clipboard from '@/directive/clipboard/index'
 // 导入global error component
 import './errorLog'
 
@@ -35,6 +36,7 @@ Vue.use(ElementUi)
 // 使用v-wave 波浪效果
 Vue.use(Wave)
 Vue.use(Exclude)
+Vue.use(Clipboard)
 
 // add baidu count
 if (process.env.NODE_ENV === 'production') {
