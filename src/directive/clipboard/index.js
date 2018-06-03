@@ -24,9 +24,9 @@ Clipboard.install = (Vue, options) => {
         if (!value) {
           Message.error('请输入要复制问的文本')
         }
-        if (isSupportChromeVersion(66)) {
+        if (isSupportChromeVersion(66) && window.navigator.clipboard) {
           // chrome version 66+ support
-          navigator.clipboard.writeText(value).then(() => {
+          window.navigator.clipboard.writeText(value).then(() => {
             Message.success('复制成功啦, 赶快使用吧')
           }).catch((error) => {
             Message.error(error)
