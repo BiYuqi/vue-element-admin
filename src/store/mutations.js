@@ -83,7 +83,11 @@ export const mutations = {
     state.todoList.splice(index, 1)
   },
   addErrorLog (state, msg) {
-    state.errorLog.push(msg)
+    if (msg.repeat) {
+      state.errorLog.splice(msg.index, 1, msg)
+    } else {
+      state.errorLog.push(msg)
+    }
   },
   setLanguage (state, lang) {
     state.language = lang

@@ -86,10 +86,10 @@ export default {
   }
   .github-corner{
     border-bottom: 0;
-    position: fixed;
+    position: absolute;
     right: 0;
     text-decoration: none;
-    top: 84px;
+    top: 0;
     z-index: 1;
     svg{
       color: #fff;

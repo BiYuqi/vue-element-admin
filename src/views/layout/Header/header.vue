@@ -8,7 +8,6 @@
       @click.native="changeTab">
     </svg-icon>
     <div class="svg-group">
-      <svg-icon class="language-trans" :size="20" name="camera" @click.native="getCanvas"/>
       <language-trans class="language-trans"></language-trans>
     </div>
     <el-dropdown trigger="click" size="small" class="user-info" @command="handleCommand">
@@ -22,35 +21,21 @@
         <el-dropdown-item command="loginout">退出登录</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-    <el-dialog
-      :visible.sync="dialogVisible"
-      top="0"
-      class="capture"
-      width="90%">
-      <div id="render">
-        <img :src="canvas" alt="" style="width: 100%;">
-      </div>
-      <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="downLoadImg">下 载</el-button>
-      </span>
-    </el-dialog>
   </div>
 </template>
 
 <script>
 import Cookie from 'js-cookie'
 import languageTrans from '@/components/LangSelect'
-import Html2Canvas from '@/utils/html2canvas'
-// import canvg from 'canvg'
+import ScreenShots from '@/components/ScreenShots'
 export default {
   data () {
     return {
-      dialogVisible: false,
-      canvas: ''
     }
   },
   components: {
-    languageTrans
+    languageTrans,
+    ScreenShots
   },
   methods: {
     goBack () {
@@ -88,14 +73,6 @@ export default {
       }
     },
     getCanvas () {
-      new Html2Canvas().drawCanvas('#app').then(canvas => {
-        this.canvas = canvas.toDataURL('image/png')
-        this.dialogVisible = true
-      })
-    },
-    downLoadImg () {
-      new Html2Canvas().downLoadImg(this.canvas, this.$route.name)
-      this.dialogVisible = false
     }
   },
   computed: {

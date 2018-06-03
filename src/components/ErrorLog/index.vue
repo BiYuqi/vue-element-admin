@@ -1,22 +1,23 @@
 <template lang="html">
   <div class="bugger">
-    <el-button @click="testBug">测试BUG</el-button>
     <el-table :data="errorLog" border>
       <el-table-column label="Message">
         <template slot-scope="scope">
           <div>
             <span class="message-title">Msg:</span>
             <el-tag type="danger">{{ scope.row.err.message }}</el-tag>
-          </div>
-          <br/>
+          </div><br/>
           <div>
             <span class="message-title" style="padding-right: 10px;">Info: </span>
             <el-tag type="warning">{{scope.row.vm.$vnode.tag}} error in {{scope.row.info}}</el-tag>
-          </div>
-          <br/>
+          </div><br/>
           <div>
             <span class="message-title" style="padding-right: 16px;">Position: </span>
             <el-tag type="success">{{scope.row.url}}</el-tag>
+          </div><br/>
+          <div>
+            <span class="message-title" style="padding-right: 16px;">Count: </span>
+            <el-tag type="success">{{scope.row.count}}</el-tag>
           </div>
         </template>
       </el-table-column>
@@ -36,11 +37,6 @@ export default {
   },
   mounted () {
     console.log(this.errorLog)
-  },
-  methods: {
-    testBug () {
-      console.log(a)
-    }
   },
   computed: {
     errorLog () {
