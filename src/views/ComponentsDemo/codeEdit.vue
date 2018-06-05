@@ -38,6 +38,7 @@
           :highlightline="selects.highlightline"
           height="100%">
         </code-edit>
+        <el-button type="default" class="copy-code" v-clipboard="currentCode">Copy Code</el-button>
       </el-card>
     </div>
   </div>
@@ -67,12 +68,21 @@ export default {
         theme: 'chrome',
         fontSize: '14px',
         highlightline: true
-      }
+      },
+      currentCode: [
+        '/**',
+        '* 日期格式化',
+        '* @param {type} String HHMMDDhhmmss  至于中间用什么请自便',
+        '* @param {timer} Number',
+        '* HH年MM月DD月 hh:mm:ss => 2018年4月12日 22:09:30',
+        '*/',
+        'export const AGE = 19'
+      ].join('\n')
     }
   },
   methods: {
     codeChange (val) {
-      // console.log(JSON.parse(val))
+      this.currentCode = val
     }
   },
   mounted () {
@@ -88,6 +98,7 @@ export default {
   .code-wrap{
     overflow: hidden;
     height: 100%;
+    position: relative;
   }
   .code-left{
     float: left;
@@ -102,6 +113,12 @@ export default {
       padding: 10px;
       height: 100%;
     }
+  }
+  .copy-code{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 999;
   }
 }
 </style>

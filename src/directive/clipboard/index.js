@@ -28,6 +28,32 @@ Clipboard.install = (Vue, options) => {
           // chrome version 66+ support
           window.navigator.clipboard.writeText(value).then(() => {
             Message.success('复制成功啦, 赶快使用吧')
+            console.log('bind')
+          }).catch((error) => {
+            Message.error(error)
+          })
+        } else {
+          copyTarget.value = value
+          copyTarget.select()
+          document.execCommand('Copy')
+          Message.success('复制成功啦, 赶快使用吧')
+        }
+      })
+    },
+    update (el, binding) {
+      el.addEventListener('click', (e) => {
+        const value = binding.value
+        if (!value) {
+          Message.error('请输入要复制问的文本')
+        }
+        if (value === binding.oldValue) {
+          return
+        }
+        if (isSupportChromeVersion(66) && window.navigator.clipboard) {
+          // chrome version 66+ support
+          window.navigator.clipboard.writeText(value).then(() => {
+            Message.success('复制成功啦, 赶快使用吧')
+            console.log('update')
           }).catch((error) => {
             Message.error(error)
           })
