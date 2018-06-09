@@ -14,7 +14,7 @@ export default {
     return {}
   },
   mounted () {
-    console.log(a)
+    console.log(allMethods)
   },
   methods: {
     testBug () {

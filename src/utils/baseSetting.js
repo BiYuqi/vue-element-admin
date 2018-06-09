@@ -4,7 +4,7 @@ import store from '../store'
 */
 let util = {}
 util.title = (title) => {
-  title = title || ''
+  title = title || 'Vue-element-admin'
   window.document.title = title
 }
 util.opendPage = (vm, name, arg = '', query = '', meta = '', path = '') => {

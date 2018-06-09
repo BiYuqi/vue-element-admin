@@ -88,7 +88,7 @@ export default {
           })
           setTimeout(() => { // mock network slow
             this.loading = false
-          }, 1000)
+          }, 2000)
         } else {
           return false
         }
