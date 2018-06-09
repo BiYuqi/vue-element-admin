@@ -11,6 +11,9 @@ body, html{
   padding: 0;
   box-sizing: border-box;
 }
+body::-webkit-scrollbar{
+  width: 0;
+}
 .main-wrap{
   height: 100%;
   width: 100%;

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="line-chart-wrap">
-    <card-title title="技术走势图"></card-title>
+    <card-title title="技术走势图" icon="branch"></card-title>
     <div id="main-line" :style="{height:height,width:width}"></div>
   </div>
 </template>

@@ -90,4 +90,15 @@
       width: 36px !important;
     }
   }
+  .svg-icon{
+    width: 36px;
+    height: 36px;
+  }
+  .route-link{
+    text-decoration: none;
+    display: block;
+  }
+  &::-webkit-scrollbar{
+    width: 0;
+  }
 }

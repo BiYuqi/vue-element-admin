@@ -9,25 +9,35 @@
         <line-chart :chart-data="lineData"></line-chart>
       </el-col>
     </el-row>
-    <el-row :gutter="15">
+    <el-row :gutter="15" style="margin-bottom: 15px;">
       <el-col :span="9">
         <line-bar></line-bar>
       </el-col>
       <el-col :span="9">
-        <visit-bar></visit-bar>
+        <randar-chart></randar-chart>
       </el-col>
       <el-col :span="6">
         <todo-app></todo-app>
+      </el-col>
+    </el-row>
+    <el-row :gutter="15">
+      <el-col :span="12">
+        <timer-chart></timer-chart>
+      </el-col>
+      <el-col :span="12">
+        <meter-chart></meter-chart>
       </el-col>
     </el-row>
   </div>
 </template>
 <script>
 import LineChart from './components/LineChart.vue'
-import PanelGroup from './components/PanelGroup.vue'
+import PanelGroup from './components/PanelGroup/PanelGroup.vue'
 import TodoApp from './TodoList/index.vue'
 import LineBar from './components/LineBar.vue'
-import VisitBar from './components/VisitBar.vue'
+import TimerChart from './components/TimeChart/index.vue'
+import RandarChart from './components/RadarChart/index.vue'
+import MeterChart from './components/MeterChart/index.vue'
 const lineChartData = {
   newVisitis: {
     expectedData: [100, 120, 161, 134, 105, 160, 165],
@@ -71,7 +81,9 @@ export default {
     PanelGroup,
     TodoApp,
     LineBar,
-    VisitBar
+    TimerChart,
+    RandarChart,
+    MeterChart
   }
 }
 </script>
