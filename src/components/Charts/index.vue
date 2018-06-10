@@ -7,10 +7,11 @@
 
 <script>
 import echarts from 'echarts'
-import {dispose, listenSideBar} from '@/myMixins/charts'
+import {listenSideBar} from '@/myMixins/charts'
 import CardTitle from '@/components/CardTitle'
+import { throttle } from '@/utils/tools'
 export default {
-  mixins: [dispose, listenSideBar],
+  mixins: [listenSideBar],
   props: {
     width: {
       type: String,
@@ -68,6 +69,16 @@ export default {
   },
   mounted () {
     this.init()
+    // 控制频率，进行canvas重汇
+    window.addEventListener('resize', throttle(1000, 1000, () => {
+      this.$nextTick(() => {
+        this.charts.resize()
+      })
+    }))
+  },
+  beforeDestroy () {
+    this.charts.dispose()
+    this.charts = null
   }
 }
 </script>

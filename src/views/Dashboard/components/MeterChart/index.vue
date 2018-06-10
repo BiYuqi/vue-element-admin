@@ -15,8 +15,7 @@ export default {
   },
   data () {
     return {
-      options: {},
-      setInter: null
+      options: {}
     }
   },
   mounted () {
@@ -39,15 +38,6 @@ export default {
         }
       ]
     }
-    if (this.setInter) {
-      clearInterval(this.setInter)
-    }
-    this.setInter = setInterval(() => {
-      this.options.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0
-    }, 2000)
-  },
-  beforeDestory () {
-    clearInterval(this.setInter)
   }
 }
 </script>

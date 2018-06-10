@@ -4,27 +4,27 @@
     <panel-group
       @handlePanelSelect="handlePanelSelect">
     </panel-group>
-    <el-row :gutter="15" style="margin-bottom: 15px;">
-      <el-col :span="24">
+    <el-row :gutter="15" style="margin-bottom: 65px;">
+      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <line-chart :chart-data="lineData"></line-chart>
       </el-col>
     </el-row>
     <el-row :gutter="15" style="margin-bottom: 15px;">
-      <el-col :span="9">
+      <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <line-bar></line-bar>
       </el-col>
-      <el-col :span="9">
+      <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <randar-chart></randar-chart>
       </el-col>
-      <el-col :span="6">
+      <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <todo-app></todo-app>
       </el-col>
     </el-row>
     <el-row :gutter="15">
-      <el-col :span="12">
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <timer-chart></timer-chart>
       </el-col>
-      <el-col :span="12">
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <meter-chart></meter-chart>
       </el-col>
     </el-row>

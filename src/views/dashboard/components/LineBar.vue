@@ -1,16 +1,18 @@
 <template lang="html">
   <div class="line-chart-wrap">
-    <card-title title="娱乐项目"></card-title>
-    <div id="main-line-bar" :style="{height:height,width:width}"></div>
+    <base-chart
+      ids="main-line-bar"
+      :options="options"
+      title="用户活跃度"
+      :styles="{height:height,width:width}"
+      icon="boy">
+      </base-chart>
   </div>
 </template>
 
 <script>
-import echarts from 'echarts'
-import {dispose} from '@/myMixins/charts'
-import CardTitle from '@/components/CardTitle'
+import BaseChart from '@/components/Charts'
 export default {
-  mixins: [dispose],
   props: {
     width: {
       type: String,
@@ -22,11 +24,11 @@ export default {
     }
   },
   components: {
-    CardTitle
+    BaseChart
   },
   data () {
     return {
-      charts: null
+      options: {}
     }
   },
   methods: {
@@ -35,12 +37,11 @@ export default {
       var data1 = []
       var data2 = []
       for (var i = 0; i < 10; i++) {
-        xAxisData.push('娱乐' + i)
+        xAxisData.push(i + '月')
         data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5)
         data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5)
       }
-      this.charts = echarts.init(document.getElementById('main-line-bar'))
-      const options = {
+      this.options = {
         // legend: {
         //   data: ['boy', 'girl'],
         //   show: true,
@@ -92,7 +93,6 @@ export default {
           }
         ]
       }
-      this.charts.setOption(options)
     }
   },
   mounted () {
