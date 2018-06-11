@@ -16,7 +16,7 @@ export const router = new Router({
   routes: routes.concat(...otherRoute)
 })
 
-NProgress.configure({ showSpinner: false })// NProgress Configuration
+NProgress.configure({ showSpinner: false })
 /* eslint handle-callback-err: "error" */
 router.beforeEach((to, from, next) => {
   NProgress.start()

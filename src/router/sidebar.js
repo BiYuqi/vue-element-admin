@@ -237,23 +237,6 @@ export const baseRoute = [
       }
     ]
   },
-  // { 暂时注释
-  //   path: '/test',
-  //   title: '小工具', // 后期再翻译
-  //   name: 'test',
-  //   icon: 'tab',
-  //   component: Main,
-  //   children: [
-  //     {
-  //       path: 'css',
-  //       name: 'css_index',
-  //       meta: {
-  //         title: 'cssAngle'
-  //       },
-  //       component: () => import('@/views/ComponentsDemo/cssSet.vue')
-  //     }
-  //   ]
-  // },
   {
     path: '/bug',
     name: 'bug',
