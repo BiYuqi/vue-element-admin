@@ -20,7 +20,7 @@ export const state = {
       content: 'vue-element-admin持续开发维护'
     },
     {
-      status: 1,
+      status: 0,
       content: '深入Vue的开发学习'
     },
     {
@@ -36,8 +36,8 @@ export const state = {
       content: '学习持续集成'
     },
     {
-      status: 1,
-      content: '前端工程化+自动化有更多的实践体会'
+      status: 0,
+      content: '前端工程化+自动化有更多的实践和体会'
     },
     {
       status: 1,

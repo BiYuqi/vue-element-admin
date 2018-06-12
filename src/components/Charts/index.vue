@@ -9,7 +9,6 @@
 import echarts from 'echarts'
 import {listenSideBar} from '@/myMixins/charts'
 import CardTitle from '@/components/CardTitle'
-import { throttle } from '@/utils/tools'
 export default {
   mixins: [listenSideBar],
   props: {
@@ -54,11 +53,8 @@ export default {
     }
   },
   watch: {
-    options: {
-      handler (val) {
-        this.charts.setOption(val)
-      },
-      deep: true
+    options (val) {
+      this.charts.setOption(val)
     }
   },
   methods: {
@@ -70,14 +66,12 @@ export default {
   mounted () {
     this.init()
     // 控制频率，进行canvas重汇
-    window.addEventListener('resize', throttle(1000, 1000, () => {
-      this.$nextTick(() => {
-        this.charts.resize()
-      })
-    }))
+    // window.addEventListener('resize', throttle(1000, 1000, () => {
+    //   this.charts.resize()
+    // }))
   },
   beforeDestroy () {
-    this.charts.dispose()
+    this.charts.clear()
     this.charts = null
   }
 }

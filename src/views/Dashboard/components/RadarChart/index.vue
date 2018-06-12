@@ -3,7 +3,6 @@
     title="雷达图"
     ids="randar-chart"
     :options="options"
-
   ></base-chart>
 </template>
 
