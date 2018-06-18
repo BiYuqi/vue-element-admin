@@ -14,7 +14,7 @@
         <line-bar></line-bar>
       </el-col>
       <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
-        <randar-chart></randar-chart>
+        <randar-chart ref="randar"></randar-chart>
       </el-col>
       <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <todo-app></todo-app>
@@ -76,6 +76,9 @@ export default {
     handlePanelSelect (type) {
       this.lineData = lineChartData[type]
     }
+  },
+  activated () {
+    // console.log(this.$refs.randar)
   },
   components: {
     LineChart,

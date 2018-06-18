@@ -2,7 +2,9 @@
   <div class="app-main" :class="{hideSidebar: isCollapse}">
     <header-on></header-on>
     <tag-view></tag-view>
-    <router-view :key="key"/>
+    <keep-alive>
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 
@@ -20,6 +22,9 @@ export default {
     },
     isCollapse () {
       return this.$store.state.sidebarStatus
+    },
+    cachePage () {
+      return this.$store.state.pageOpenedList.map(item => item.name)
     }
   }
 }
