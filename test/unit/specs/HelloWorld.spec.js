@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import HelloWorld from '@/components/HelloWorld'
+import Dashboard from '@/views/Dashboard/dashboard.vue'
 
-describe('HelloWorld.vue', () => {
+describe('dashboard.vue', () => {
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(HelloWorld)
+    const Constructor = Vue.extend(Dashboard)
     const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.hello h1').textContent)
+    expect(vm.$el.querySelector('.hello h1').Dashboard)
       .toEqual('Welcome to Your Vue.js App')
   })
 })
