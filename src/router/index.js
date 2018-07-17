@@ -40,6 +40,11 @@ router.beforeEach((to, from, next) => {
       const localRole = Cookie.get('role')
       store.dispatch('user/GetUserInfoAction', {role: localRole}).then((role) => { // 服务端拉去用户role
         store.commit('user/USER_INFO', role) // vuex管理role
+        /**
+        * role.data.data.role[0]
+        * 该处是要看自己的后台返回什么字段
+        * 目前mock只是返回一个role字段
+        */
         store.dispatch('permiss/setFilterRoutes', role.data.data.role[0]).then((res) => { // 根据role过滤路由
           store.dispatch('permiss/setRoutes', res) // vuex管理路由
           router.addRoutes(res) // 动态的添加路由
