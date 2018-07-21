@@ -16,19 +16,21 @@ export default {
     highRoute: '高级路由',
     dynamicRoute: '动态路由',
     paramRoute: '带参路由',
-    setting: '配置',
+    setting: '全局配置',
     cssAngle: '三角形制作',
     errorBug: '错误日志',
     orderDetail: '订单详情',
     shopingDetail: '商店详情',
     composite: '综合实例',
-    table: '表格',
+    table: '基础表格',
     tab: 'Tab',
     codeEdit: '代码编辑器',
     arrowSelect: '箭头选值',
     userInfo: '用户信息',
     editInfo: '修改信息',
     manageInfo: '信息管理',
-    richEditor: '富文本编辑器'
+    richEditor: '富文本编辑器',
+    publicArticle: '文章发布',
+    articleList: '所有文章'
   }
 }

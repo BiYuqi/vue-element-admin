@@ -1,7 +1,7 @@
 <template>
-  <div class="app-main" :class="{hideSidebar: isCollapse}">
-    <header-on></header-on>
-    <tag-view></tag-view>
+  <div class="app-main"
+    :class="{hideSidebar: isCollapse}"
+    style="height: calc(100%);">
     <keep-alive>
       <router-view />
     </keep-alive>
@@ -9,13 +9,7 @@
 </template>
 
 <script>
-import HeaderOn from '@/views/Layout/Header/header'
-import TagView from '@/views/Layout/TagView/tagview'
 export default {
-  components: {
-    HeaderOn,
-    TagView
-  },
   computed: {
     key () {
       return this.$route.name !== undefined ? this.$route.name + +new Date() : this.$route + +new Date()

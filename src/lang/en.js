@@ -16,7 +16,7 @@ export default {
     highRoute: 'Hign Router',
     dynamicRoute: 'Dynamic Router',
     paramRoute: 'Param Router',
-    setting: 'Setting',
+    setting: 'Global Setting',
     cssAngle: 'CSS Angle',
     errorBug: 'Error Bug',
     orderDetail: 'Order Detail',
@@ -29,6 +29,8 @@ export default {
     userInfo: 'User Info',
     editInfo: 'Edit Info',
     manageInfo: 'Manage Info',
-    richEditor: 'RichEditor'
+    richEditor: 'RichEditor',
+    publicArticle: 'Public Article',
+    articleList: 'All Article'
   }
 }

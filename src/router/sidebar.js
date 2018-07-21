@@ -175,6 +175,22 @@ export const baseRoute = [
     component: Main,
     children: [
       {
+        path: 'article-list',
+        name: 'article_index',
+        meta: {
+          title: 'articleList'
+        },
+        component: () => import('@/views/ArticleManage/ArticleList/index.vue')
+      },
+      {
+        path: 'public-article',
+        name: 'public_index',
+        meta: {
+          title: 'publicArticle'
+        },
+        component: () => import('@/views/ArticleManage/PublicArticle/index.vue')
+      },
+      {
         path: 'table',
         name: 'table_index',
         meta: {
@@ -233,7 +249,7 @@ export const baseRoute = [
           title: 'setting',
           access: ['admin']
         },
-        component: () => import('@/views/ComponentsDemo/setting.vue')
+        component: () => import('@/views/SettingPage/setting.vue')
       }
     ]
   },

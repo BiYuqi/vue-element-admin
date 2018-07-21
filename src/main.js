@@ -22,6 +22,7 @@ import Exclude from '@/directive/exclude/index'
 import Clipboard from '@/directive/clipboard/index'
 // 导入global error component
 import './errorLog'
+import EventBus from '@/utils/eventBus'
 
 // 注册全局svg-icon组件
 Vue.component('svg-icon', SvgIcon)
@@ -30,6 +31,7 @@ Vue.component('com-intro', ComIntro)
 // 待开发组件提示
 Vue.component('coding-tip', CodingTip)
 Vue.config.productionTip = false
+Vue.prototype.$bus = EventBus
 
 // 使用element-ui
 Vue.use(ElementUi)
