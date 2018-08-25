@@ -18,8 +18,16 @@
   .tag{
     cursor: pointer;
   }
-  .tag-view{
-    .current{
+  .el-tag{
+    border-radius: 0;
+    margin: 0 2px;
+    border: 1px solid #eee;
+    color: #495060;
+    height: 26px;
+    line-height: 26px;
+    background-color: #fff;
+    transition: all .2s;
+    &.current{
       background-color: $tagColor;
       color: #fff !important;
       border-color: $tagColor;
@@ -41,16 +49,6 @@
         color: #fff;
       }
     }
-  }
-  .el-tag{
-    border-radius: 0;
-    margin: 0 2px;
-    border: 1px solid #eee;
-    color: #495060;
-    height: 26px;
-    line-height: 26px;
-    background-color: #fff;
-    transition: all .2s;
     .el-icon-close{
       font-size: 10px;
       transform: scale(.6);

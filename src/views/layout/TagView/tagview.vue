@@ -1,17 +1,16 @@
 <template lang="html">
   <div class="tag-wrap" ref="tagWrap" v-if="headVisetedShow && tagList.length > 0">
     <div class="tag-overflow" ref="tagOver">
-      <router-link :to="items.path" :key="items.path" class="tag-view" v-for="items in tagList">
-        <el-tag
-          :key="items.name"
-          @click.native="tagClick(items)"
-          closable
-          :class="{'current': items.name === currentPageName}"
-          @close.prevent="close(items.name)"
-          :type="items.type" class="tag">
-          {{generateTitleTrans(items.meta.title)}}
-        </el-tag>
-      </router-link>
+      <el-tag
+        v-for="items in tagList"
+        :key="items.name"
+        @click.native="tagClick(items)"
+        closable
+        :class="{'current': items.name === currentPageName}"
+        @close.prevent="close(items.name)"
+        :type="items.type" class="tag">
+        {{generateTitleTrans(items.meta.title)}}
+      </el-tag>
     </div>
   </div>
 </template>
