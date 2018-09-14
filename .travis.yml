@@ -18,7 +18,7 @@ after_script:
   - git config user.email "biyuqiwan@163.com"
   - git add .
   - git commit -m "Deployed by travis-ci"
-  - git push --force --quiet "https://${VUE_ADMIN}@${GH_REF}" master:dev
+  - git push --force --quiet "https://${VUE_ADMIN}@${GH_REF}" master:gh-pages
 
 branches:
   only:
