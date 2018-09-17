@@ -40,6 +40,7 @@ npm run build
 server文件夹
 * 为本地node服务，本地npm run dev后，需要在server目录 node app 来启动本地服务，以便登录正常进行
 * 以下为utils/request.js文件配置
+* 执行 npm run app 即可
 ```js
 // base setting
 const BASE_URL = process.env.NODE_ENV === 'production'

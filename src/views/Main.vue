@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import AppMain from '@/views/Layout/AppMain'
-import HeaderOn from '@/views/Layout/Header/header'
-import TagView from '@/views/Layout/TagView/tagview'
-import SideBar from '@/views/Layout/SideBar/sidebar'
+import AppMain from '@/views/Layout/appMain'
+import HeaderOn from '@/views/Layout/Header/header.vue'
+import TagView from '@/views/Layout/TagView/tagview.vue'
+import SideBar from '@/views/Layout/SideBar/sidebar.vue'
 import Cookie from 'js-cookie'
 export default {
   data () {
