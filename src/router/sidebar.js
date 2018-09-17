@@ -14,7 +14,7 @@ export const baseRoute = [
         meta: {
           title: 'dashboard'
         },
-        component: () => import('@/views/dashboard/dashboard.vue')
+        component: () => import('@/views/Dashboard/dashboard.vue')
       }
     ]
   },
