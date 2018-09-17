@@ -4,7 +4,7 @@
     :options="options"
     title="上证指数"
     icon="international">
-    </base-chart>
+  </base-chart>
 </template>
 
 <script>

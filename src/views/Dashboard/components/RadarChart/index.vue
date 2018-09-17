@@ -19,11 +19,6 @@ export default {
   },
   mounted () {
     this.options = {
-      // legend: {
-      //   data: ['Product A', 'Product B'],
-      //   align: 'left',
-      //   right: 20
-      // },
       radar: {
         name: {
           textStyle: {

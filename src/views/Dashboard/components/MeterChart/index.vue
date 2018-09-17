@@ -3,8 +3,8 @@
     ids="meter-chart"
     :options="options"
     title="仪表盘"
-    icon="dashboard"
-  ></base-chart>
+    icon="dashboard">
+  </base-chart>
 </template>
 
 <script>

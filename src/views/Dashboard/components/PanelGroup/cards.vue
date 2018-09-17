@@ -1,7 +1,10 @@
 <template lang="html">
   <div class="cards">
     <div class="panel panel-peoples" :class="className">
-      <svg-icon :name="name" :size="38"></svg-icon>
+      <svg-icon
+        :name="name"
+        :size="38">
+      </svg-icon>
     </div>
     <div class="panel-box">
       <span class="top">{{topText}}</span>
