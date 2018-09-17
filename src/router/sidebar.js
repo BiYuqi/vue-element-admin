@@ -14,7 +14,7 @@ export const baseRoute = [
         meta: {
           title: 'dashboard'
         },
-        component: () => import('@/views/Dashboard/dashboard.vue')
+        component: () => import('@/views/dashboard/dashboard.vue')
       }
     ]
   },
@@ -222,7 +222,7 @@ export const baseRoute = [
           title: 'userInfo',
           access: ['admin']
         },
-        component: () => import('@/views/UserInfo/setInfo.vue')
+        component: () => import('@/views/userInfo/setInfo.vue')
       },
       {
         path: 'editinfo',
@@ -231,7 +231,7 @@ export const baseRoute = [
           title: 'editInfo',
           access: ['admin']
         },
-        component: () => import('@/views/UserInfo/editInfo.vue')
+        component: () => import('@/views/userInfo/editInfo.vue')
       }
     ]
   },
