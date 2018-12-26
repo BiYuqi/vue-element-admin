@@ -21,14 +21,14 @@
       </el-col>
     </el-row>
     <!-- 一打开就崩溃，暂时未找到原因 -->
-    <!-- <el-row :gutter="15">
+    <el-row :gutter="15">
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <timer-chart></timer-chart>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <meter-chart></meter-chart>
       </el-col>
-    </el-row> -->
+    </el-row>
   </div>
 </template>
 <script>
@@ -36,9 +36,9 @@ import LineChart from './components/LineChart.vue'
 import PanelGroup from './components/PanelGroup/PanelGroup.vue'
 import TodoApp from './TodoList/index.vue'
 import LineBar from './components/LineBar.vue'
-// import TimerChart from './components/TimeChart'
+import TimerChart from './components/TimeChart'
 import RandarChart from './components/RadarChart'
-// import MeterChart from './components/MeterChart'
+import MeterChart from './components/MeterChart'
 const lineChartData = {
   newVisitis: {
     expectedData: [100, 120, 161, 134, 105, 160, 165],
@@ -85,9 +85,9 @@ export default {
     PanelGroup,
     TodoApp,
     LineBar,
-    RandarChart
-    // TimerChart,
-    // MeterChart
+    RandarChart,
+    TimerChart,
+    MeterChart
   }
 }
 </script>

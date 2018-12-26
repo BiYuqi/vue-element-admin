@@ -66,7 +66,7 @@ export default {
   },
   mounted () {
     this.init()
-    this.nextTick(() => {
+    this.$nextTick(() => {
       if (this.charts) {
         window.addEventListener('resize', throttle(1000, 1000, () => {
           this.charts.resize()
