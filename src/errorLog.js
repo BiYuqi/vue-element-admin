@@ -1,5 +1,5 @@
 import Vue from 'vue'
-// if (process.env.NODE_ENV) === 'production)'
+// 该文件暂无法使用,请注意
 Vue.config.errorHandler = (err, vm, info) => {
   Vue.nextTick(() => {
     const url = err.stack.match(/((?:\w+\/)+\w+.vue):/m)[1] || ''

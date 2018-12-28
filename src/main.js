@@ -20,8 +20,6 @@ import i18n from './lang'
 import Wave from '@/directive/wave/index'
 import Exclude from '@/directive/exclude/index'
 import Clipboard from '@/directive/clipboard/index'
-// 导入global error component
-// import './errorLog'
 import EventBus from '@/utils/eventBus'
 
 // 注册全局svg-icon组件
