@@ -15,7 +15,7 @@ export default {
   },
   data () {
     return {
-      options: null
+      options: {}
     }
   },
   mounted () {
