@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <base-chart
     ids="meter-chart"
     :options="options"

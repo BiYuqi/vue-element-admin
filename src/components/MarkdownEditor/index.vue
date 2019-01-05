@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="simplemde-container" :style="{height:height+'px',zIndex:zIndex}">
     <textarea :id="id">
     </textarea>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="form-one">
     <el-input v-model="innerOne.one"></el-input>
     {{innerOne.common}}

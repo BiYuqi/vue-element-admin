@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="form-listen components-wrap">
     <form-child :formInfo="forms" @on-form-change="onFormChange"></form-child>
     <el-button>{{test}}</el-button>

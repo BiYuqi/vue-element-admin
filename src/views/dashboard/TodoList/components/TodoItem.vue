@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="todo-body">
     <ul class="todo-list">
       <li class="todo-item" v-for="(item, index) in todoList" :key="item.id">

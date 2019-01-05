@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="order-demo components-wrap">{{$route.query.id}}</div>
 </template>
 

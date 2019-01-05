@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="cards">
     <div class="panel panel-peoples" :class="className">
       <svg-icon

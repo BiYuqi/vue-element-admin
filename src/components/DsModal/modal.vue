@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <transition name="modal-fade">
     <div class="dialog__wrapper" v-if="visible" @click="closeModal">
       <div class="modal" v-if="visible"></div>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <span style="cursor: pointer;" title="捕捉快照">
     <svg-icon class="language-trans" :size="20" name="camera" @click.native="getCanvas"/>
     <el-dialog

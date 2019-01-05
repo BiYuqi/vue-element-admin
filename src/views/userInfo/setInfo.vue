@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="set-info components-wrap">
     <coding-tip></coding-tip>
   </div>

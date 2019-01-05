@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="byq-toolbar">
     <span class="byq-formats">
       <button

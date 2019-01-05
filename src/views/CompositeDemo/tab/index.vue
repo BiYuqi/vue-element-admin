@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="tab-wrap compoents-wrap">
     <coding-tip></coding-tip>
   </div>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="tag-wrap" ref="tagWrap" v-if="headVisetedShow && tagList.length > 0">
     <div class="tag-overflow" ref="tagOver">
       <el-tag

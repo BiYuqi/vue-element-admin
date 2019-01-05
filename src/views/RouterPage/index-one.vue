@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="router-one components-wrap">
     <el-row>
       <el-col :span="12">

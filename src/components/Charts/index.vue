@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="line-chart-wrap" :style="styles">
     <card-title :title="title" v-if="title" :icon="icon"></card-title>
     <div :id="ids" :style="{height:height,width:width}"></div>

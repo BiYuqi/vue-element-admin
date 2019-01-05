@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="rich-editor components-wrap">
     <rich-editor></rich-editor>
   </div>

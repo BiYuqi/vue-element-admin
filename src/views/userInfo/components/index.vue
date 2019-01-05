@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="temp-info">
     <div class="title">
       <svg-icon :name="name" :size="14"></svg-icon>

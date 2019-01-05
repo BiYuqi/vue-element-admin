@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="bugger components-wrap">
     <el-button @click="testBug">测试BUG</el-button>
     <screen-shots ids="bugger-page"></screen-shots>

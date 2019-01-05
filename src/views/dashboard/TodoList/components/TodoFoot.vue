@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="todo-foot clear" v-if="todoList.length > 0">
     <span class="left">{{todoLeft.length}} items left</span>
     <ul class="right">

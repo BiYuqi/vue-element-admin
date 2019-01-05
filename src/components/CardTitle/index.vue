@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="line-card-wrap">
     <div class="line-card-title" v-if="title">
       <svg-icon :name="icon"></svg-icon>

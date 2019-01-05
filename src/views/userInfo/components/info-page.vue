@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="edit-info components-wrap">
       <info-temp title="修改密码">
         <el-form ref="changeUserInfo" label-width="70px" :rules="rules" :model="userInfo" size="small">

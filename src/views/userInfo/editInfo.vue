@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="edit-info components-wrap">
     <el-row>
       <el-col :span="8">

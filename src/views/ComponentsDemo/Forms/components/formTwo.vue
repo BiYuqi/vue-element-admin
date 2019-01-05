@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="form-two">
     <el-input v-model="innerData.two"></el-input>
     {{innerData.common}}

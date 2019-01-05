@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="table-wrap components-wrap">
     <coding-tip></coding-tip>
   </div>

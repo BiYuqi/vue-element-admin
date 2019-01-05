@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="todo-header">
     <el-input placeholder="TODO LIST" v-model="todoCon" @keyup.enter.native="submit">
       <template slot="prepend">

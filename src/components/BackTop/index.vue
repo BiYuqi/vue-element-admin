@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="b-back-top" @click="goTop" name="button" v-show="visible" :style="customStyle">
     <svg width="16" height="16" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="back-icon" aria-hidden="true" style="height: 16px; width: 16px;">
       <g>
@@ -79,5 +79,4 @@ export default {
       background: none;
     }
 }
-
 </style>

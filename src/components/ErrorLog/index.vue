@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="bugger">
     <el-table :data="errorLog" border>
       <el-table-column label="Message">

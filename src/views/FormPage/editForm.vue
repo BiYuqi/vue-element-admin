@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="editor-form components-wrap">
     <coding-tip></coding-tip>
   </div>

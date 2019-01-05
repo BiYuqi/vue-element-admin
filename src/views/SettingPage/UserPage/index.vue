@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <el-card class="box-card">
     <div slot="header" class="clearfix">
       <span>个人设置</span>

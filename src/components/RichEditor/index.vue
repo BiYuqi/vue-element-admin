@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="byq-editor-wrap" :style="styles">
     <byq-head></byq-head>
     <div class="byq-editor">

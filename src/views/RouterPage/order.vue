@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="order-demo components-wrap">
     <p>订单编号：{{currentOrder}}</p>
     <p>创建时间：{{format('HH年MM月DD日 hh:mm:ss', currentOrder)}}</p>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="setting-wrap components-wrap">
     <el-row :gutter="20">
       <el-col :span="12">

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="svg-icon-demo components-wrap">
     <com-intro
       leftTxt="请点击右边链接进行查看组件使用方法"

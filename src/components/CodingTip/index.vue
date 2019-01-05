@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="codeing">
     <svg-icon name="computer" :size="200"></svg-icon>
     <p>正在紧锣密鼓的开发....期待你的加入....</p>

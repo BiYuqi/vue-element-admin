@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <el-row :gutter="15">
     <el-col :sm="12" :md="4" :lg="4">
       <sm-card 

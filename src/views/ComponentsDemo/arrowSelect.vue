@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="arrow-demo">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
