@@ -2,10 +2,12 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
-const vueLoaderConfig = require('./vue-loader.conf')
+const { VueLoaderPlugin } = require('vue-loader')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+const devMode = process.env.NODE_ENV !== 'production'
 
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
@@ -52,17 +54,33 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')],
+        exclude: file => (
+          /node_modules/.test(file) &&
+          !/\.vue\.js/.test(file)
+        )
       },
       {
         test: /\.scss$/,
-        loader: ['style', 'css', 'sass']
+        use: [
+          {
+            loader: devMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -91,6 +109,9 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new VueLoaderPlugin()
+  ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
