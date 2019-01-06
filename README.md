@@ -55,10 +55,11 @@ const service = axios.create({
 })
 ```
 ### Change Log
-* 2019.1.6
-升级webpack4等相关依赖
-重新配置production打包环境
-升级vue, vue-loader
+**2019.1.6**
+* 升级webpack4等相关依赖
+* 重新配置production打包环境
+* 升级vue, vue-loader
+
 ### DEMO
 
 ![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-31%2011.52.51.png)
