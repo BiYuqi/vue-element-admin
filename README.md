@@ -33,6 +33,9 @@ npm run dev
 
 // build for production with minification
 npm run build
+
+// analyze bundle details
+npm run analyz
 ```
 ### 本地起服务
 由于easy-mock服务非常不稳定，所以本地新增node模拟接口
@@ -51,6 +54,11 @@ const service = axios.create({
   timeout: 10000
 })
 ```
+### Change Log
+* 2019.1.6
+升级webpack4等相关依赖
+重新配置production打包环境
+升级vue, vue-loader
 ### DEMO
 
 ![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-31%2011.52.51.png)
