@@ -9,6 +9,8 @@
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+  display: flex;
+  align-items: center;
   &::-webkit-scrollbar{
     height: 0;
   }
