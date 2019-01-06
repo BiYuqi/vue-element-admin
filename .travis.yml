@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - "8"
 
-# cache:
-#   directories:
-#     - node_modules
+cache:
+  directories:
+    - node_modules
 
 before_install:
   - export TZ='Asia/Shanghai' # 更改时区
@@ -21,7 +21,7 @@ after_script:
   - git config user.name "BiYuqi"
   - git config user.email "biyuqiwan@163.com"
   - git add .
-  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %${H+8}:%M"`"
+  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
   - git push --force --quiet "https://${VUE_ADMIN}@${GH_REF}" master:gh-pages
 
 branches:
