@@ -5,6 +5,9 @@ node_js: stable
 #   directories:
 #     - node_modules
 
+before_install:
+  - export TZ='Asia/Shanghai' # 更改时区
+
 install:
   - npm install
 
@@ -17,7 +20,7 @@ after_script:
   - git config user.name "BiYuqi"
   - git config user.email "biyuqiwan@163.com"
   - git add .
-  - git commit -m "Deployed by travis-ci"
+  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %${H+8}:%M"`"
   - git push --force --quiet "https://${VUE_ADMIN}@${GH_REF}" master:gh-pages
 
 branches:
