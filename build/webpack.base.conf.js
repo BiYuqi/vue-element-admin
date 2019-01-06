@@ -3,6 +3,9 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const { VueLoaderPlugin } = require('vue-loader')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const devMode = process.env.NODE_ENV !== 'production'
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -49,6 +52,25 @@ module.exports = {
         options: {
           symbolId: 'icon-[name]'
         }
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: devMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
+            // to fixed the fonts path error
+            options: devMode ? {} : { publicPath: '../../' }
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ]
       },
       {
         test: /\.vue$/,

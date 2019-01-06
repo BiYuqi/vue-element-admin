@@ -15,15 +15,12 @@ const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : require('../config/prod.env')
 
+// For NamedChunksPlugin
+const seen = new Set()
+const nameLength = 4
+
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
-  module: {
-    rules: utils.styleLoaders({
-      sourceMap: config.build.productionSourceMap,
-      extract: true,
-      usePostCSS: true
-    })
-  },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,
@@ -102,9 +99,24 @@ const webpackConfig = merge(baseWebpackConfig, {
         removeAttributeQuotes: true
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
-      },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
+      }
+    }),
+    // keep chunk.id stable when chunk has no name
+    new webpack.NamedChunksPlugin(chunk => {
+      if (chunk.name) {
+        return chunk.name
+      }
+      const modules = Array.from(chunk.modulesIterable)
+      if (modules.length > 1) {
+        const hash = require('hash-sum')
+        const joinedHash = hash(modules.map(m => m.id).join('_'))
+        let len = nameLength
+        while (seen.has(joinedHash.substr(0, len))) len++
+        seen.add(joinedHash.substr(0, len))
+        return `chunk-${joinedHash.substr(0, len)}`
+      } else {
+        return modules[0].id
+      }
     }),
     // 根据模块的相对路径生成一个四位数的hash作为模块id
     new webpack.HashedModuleIdsPlugin(),
