@@ -15,7 +15,7 @@
 import AppMain from '@/views/layout/appMain'
 import HeaderOn from '@/views/layout/Header/header.vue'
 import TagView from '@/views/layout/TagView/tagview.vue'
-import SideBar from '@/views/layout/SideBar'
+import SideBar from '@/views/layout/SideBar/index.vue'
 import Cookie from 'js-cookie'
 export default {
   data () {
