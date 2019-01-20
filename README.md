@@ -60,6 +60,10 @@ const service = axios.create({
 * 重新配置production打包环境
 * 升级vue, vue-loader
 
+### TODO
+- 重写router加载逻辑, 支持纯后台返回, 前端只做校验
+- 更新脚手架vue-cli3
+
 ### DEMO
 
 ![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-31%2011.52.51.png)
