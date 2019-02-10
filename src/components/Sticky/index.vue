@@ -1,6 +1,6 @@
 <template>
   <div class="sticky-wrap" ref="sticktyRap" :style="{height: height}">
-    <div class="sticky-inner" ref="stickty" :class="{active: isFiexd}" :style="{width: width, height: height, 'line-height': height, 'background-color': backgroundColor}">
+    <div class="sticky-inner" ref="stickty" :class="{active: isFiexd}" :style="{width: width, height: height, 'line-height': height, 'background-color': backgroundColor, top: fixedTop}">
       <slot></slot>
     </div>
   </div>
@@ -24,6 +24,9 @@ export default {
     visibleHeight: { // 吸顶盒子距离顶部距离
       type: Number,
       required: true
+    },
+    top: {
+      type: [String, Number]
     }
   },
   data () {
@@ -44,6 +47,11 @@ export default {
       }
     }
   },
+  computed: {
+    fixedTop() {
+      return this.isFiexd ? `${this.top}px` : 0
+    }
+  },
   mounted () {
     window.addEventListener('scroll', this.handlerScroll)
   },
@@ -61,6 +69,7 @@ export default {
     padding-right: 30px;
     top: 0;
     z-index: 100;
+    transition: top .2s;
     &.active{
       position: fixed;
     }

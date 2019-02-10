@@ -1,6 +1,6 @@
 <template>
   <div class="sticky-demo">
-    <sticky-pan :visibleHeight="84" height="40px" backgroundColor="#43a1c9">
+    <sticky-pan :top="84" :visibleHeight="84" height="40px" backgroundColor="#43a1c9">
       <div class="s-right">
         <el-select
           v-model="platform"
