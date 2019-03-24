@@ -28,6 +28,9 @@ cd vue-element-admin
 // install dependencies
 npm install
 
+// start local server
+npm run server
+
 // serve with hot reload at localhost:8080
 npm run dev
 
@@ -37,7 +40,8 @@ npm run build
 // analyze bundle details
 npm run analyz
 ```
-### 本地起服务
+### 本地起服务（必须）
+`npm run server`
 由于easy-mock服务非常不稳定，所以本地新增node模拟接口
 
 server文件夹
@@ -56,9 +60,10 @@ const service = axios.create({
 ```
 ### Change Log
 **2019.1.6**
-* 升级webpack4等相关依赖
-* 重新配置production打包环境
-* 升级vue, vue-loader
+
+- [x] 升级webpack4等相关依赖
+- [x] 重新配置production打包环境
+- [x] 升级vue, vue-loader
 
 ### TODO
 - 重写router加载逻辑, 支持纯后台返回, 前端只做校验
