@@ -14,7 +14,7 @@
     "build": "cross-env NODE_ENV=production node build/build.js",
     "analyz": "NODE_ENV=production npm_config_report=true npm run build",
     "docs": "docsify serve docs",
-    "app": "cd server && node app.js"
+    "server": "cd server && node app.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
