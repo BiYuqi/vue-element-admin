@@ -1,0 +1,1 @@
+.arrow-select{position:relative}.arrow-select ul{list-style:none}.arrow-select li{height:40px;line-height:40px;cursor:pointer;padding-left:10px;border-bottom:1px solid #dcdfe6;-webkit-transition:all .2s;transition:all .2s}.arrow-select li:hover{background-color:#eee;color:#409eff}.arrow-select li.active{background-color:#409eff;color:#fff}
