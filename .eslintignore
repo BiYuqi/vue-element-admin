@@ -1,6 +1,0 @@
-.DS_Store
-/build/
-/config/
-/dist/
-/*.js
-/test/unit/coverage/

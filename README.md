@@ -50,14 +50,4 @@ npm run analyz
 
 ### TODO
 - 重写router加载逻辑, 支持纯后台返回, 前端只做校验
-- 更新脚手架vue-cli3
-
-### DEMO
-
-![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-31%2011.52.51.png)
-
-![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-5-12.png)
-
-![](http://oiukswkar.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-01%2020.32.49.png)
-
-![](http://oiukswkar.bkt.clouddn.com/vue-admin-51.gif)
+- [x] 更新脚手架vue-cli3

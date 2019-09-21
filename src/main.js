@@ -6,6 +6,7 @@ import App from './App'
 import {router} from './router'
 // 导入状态管理器
 import store from './store'
+
 // 导入element组件
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -45,11 +46,10 @@ if (process.env.NODE_ENV === 'production') {
   let s = document.getElementsByTagName('script')[0]
   s.parentNode.insertBefore(hm, s)
 }
-/* eslint-disable no-new */
+
 new Vue({
-  el: '#app',
   i18n,
   router,
   store,
   render: h => h(App)
-})
+}).$mount('#app')

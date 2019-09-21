@@ -10,9 +10,6 @@ import 'font-awesome/css/font-awesome.min.css'
 import 'simplemde/dist/simplemde.min.css'
 import SimpleMDE from 'simplemde'
 export default {
-  components: {
-    SimpleMDE
-  },
   props: {
     value: String,
     id: {

@@ -27,15 +27,13 @@
 <script>
 import Cookie from 'js-cookie'
 import languageTrans from '@/components/LangSelect'
-import ScreenShots from '@/components/ScreenShots'
 export default {
   data () {
     return {
     }
   },
   components: {
-    languageTrans,
-    ScreenShots
+    languageTrans
   },
   methods: {
     goBack () {

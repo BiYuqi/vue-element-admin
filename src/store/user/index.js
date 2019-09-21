@@ -1,5 +1,5 @@
 import * as types from './types.js'
-import {fetchUserInfo, fetchArrowSelect} from '@/api/userInfo'
+import {fetchUserInfo} from '@/api/userInfo'
 
 const state = {
   role: []// 存储角色信息
