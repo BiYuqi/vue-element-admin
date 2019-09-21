@@ -40,24 +40,7 @@ npm run build
 // analyze bundle details
 npm run analyz
 ```
-### 本地起服务（必须）
-`npm run server`
-由于easy-mock服务非常不稳定，所以本地新增node模拟接口
 
-server文件夹
-* 为本地node服务，本地npm run dev后，需要在server目录 node app 来启动本地服务，以便登录正常进行
-* 以下为utils/request.js文件配置
-* 执行 npm run app 即可
-```js
-// base setting
-const BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://easy-mock.com/mock/5aa881eb99ed355f274d0e93'
-  : 'http://localhost:1234'
-const service = axios.create({
-  baseURL: BASE_URL,
-  timeout: 10000
-})
-```
 ### Change Log
 **2019.1.6**
 

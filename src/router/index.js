@@ -38,14 +38,14 @@ router.beforeEach((to, from, next) => {
     if ((Cookie.get('user')) && store.getters['user/role'].length === 0) { // 已经登录且角色已经分配
       /** 正式用注释这段就够了，因为后台回返给不同的角色 */
       const localRole = Cookie.get('role')
-      store.dispatch('user/GetUserInfoAction', {role: localRole}).then((role) => { // 服务端拉去用户role
-        store.commit('user/USER_INFO', role) // vuex管理role
+      store.dispatch('user/GetUserInfoAction', {role: localRole}).then(res => { // 服务端拉去用户role
+        store.commit('user/USER_INFO', res) // vuex管理role
         /**
-        * role.data.data.role[0]
+        * res.data.role[0]
         * 该处是要看自己的后台返回什么字段
         * 目前mock只是返回一个role字段
         */
-        store.dispatch('permiss/setFilterRoutes', role.data.data.role[0]).then((res) => { // 根据role过滤路由
+        store.dispatch('permiss/setFilterRoutes', res.data.role[0]).then(res => { // 根据role过滤路由
           store.dispatch('permiss/setRoutes', res) // vuex管理路由
           router.addRoutes(res) // 动态的添加路由
           router.addRoutes(errPage) // 增加404page
